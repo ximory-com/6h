@@ -1,190 +1,432 @@
-export const contentData = {
+export const contentData = 
+{
   "site": {
     "zh": {
       "title": "心沐六和",
       "subtitle": "念和在心·归和而明",
       "description": "在这个快节奏的时代，我们常常迷失在外在的纷扰中，忘记了内心的声音。心沐六和，是一次深入内心的探索之旅，带您从内在觉醒到宇宙和谐，走上一条完整的修行之路。",
       "cta": "开始探索",
-      "core_philosophy": "念和在心·归和而明",
-      "logo": "/src/assets/logo_concept.png"
+      "core_philosophy": "念和在心·归和而明"
     },
     "en": {
       "title": "Ximory Six Harmonies",
-      "subtitle": "Harmony in Mind, Clarity in Return",
-      "description": "In this fast-paced era, we often lose ourselves in external distractions, forgetting our inner voice. Ximory Six Harmonies is a journey of deep inner exploration, guiding you from inner awakening to cosmic harmony, walking a complete path of cultivation.",
+      "subtitle": "Harmony in Mind · Clarity in Return",
+      "description": "In this fast-paced era, we often lose ourselves in external distractions, forgetting our inner voice. Ximory Six Harmonies is a journey of deep inner exploration, guiding you from inner awakening to cosmic harmony on a complete path of cultivation.",
       "cta": "Begin Exploration",
-      "core_philosophy": "Harmony in Mind, Clarity in Return",
-      "logo": "/src/assets/logo_concept.png"
+      "core_philosophy": "Harmony in Mind · Clarity in Return"
     }
   },
-  "features": {
+  "navigation": {
     "zh": {
-      "title": "专栏特色",
-      "description": "念和在心·归和而明，一条完整的修行之路"
+      "home": "首页",
+      "articles": "专栏文章",
+      "about": "关于专栏",
+      "contact": "联系我们"
     },
     "en": {
-      "title": "Column Features",
-      "description": "Harmony in Mind, Clarity in Return - A Complete Path of Cultivation"
+      "home": "Home",
+      "articles": "Articles",
+      "about": "About",
+      "contact": "Contact"
     }
   },
-  "overview": {
-    "zh": {
-      "title": "六和总览",
-      "description": "心沐六和的完整体系图解",
-      "image": "/src/assets/中文.svg"
+  "sections": {
+    "features": {
+      "zh": {
+        "title": "专栏特色",
+        "description": "念和在心·归和而明，一条完整的修行之路"
+      },
+      "en": {
+        "title": "Column Features",
+        "description": "Harmony in Mind · Clarity in Return, a complete path of cultivation"
+      }
     },
-    "en": {
-      "title": "Six Harmonies Overview",
-      "description": "Complete system diagram of Ximory Six Harmonies",
-      "image": "/src/assets/英文.svg"
+    "articles": {
+      "zh": {
+        "title": "专栏文章",
+        "description": "探索和谐的六个层次，念和在心，归和而明"
+      },
+      "en": {
+        "title": "Column Articles",
+        "description": "Explore the six levels of harmony, harmony in mind, clarity in return"
+      }
     }
   },
   "harmonies": {
-    "zh": {
-      "title": "六和要素",
-      "description": "念和在心·归和而明的完整体系",
-      "items": [
-        {
-          "id": "self",
-          "title": "自我和",
-          "subtitle": "内省成镜，心光自明",
-          "quote": "脱下伪装，活出真实，看似脆弱，却无比自在。",
-          "description": "与内在自我对话，让情绪、认知与行动保持一致，减少内耗，活出真实的自己。",
-          "keywords": ["自我接纳", "内在平衡", "阴影整合", "自我觉察"],
-          "image": "/src/assets/article_self_harmony.png"
-        },
-        {
-          "id": "social",
-          "title": "社会和",
-          "subtitle": "外连成桥，众生无隔",
-          "quote": "减少内耗，保持坦然；彼此共鸣，彼此成就。",
-          "description": "在与他人的交往中保持平衡，不被外界裹挟，也不刻意对抗。",
-          "keywords": ["人际和谐", "慈悲心理", "理解包容", "关系平衡"],
-          "image": "/src/assets/article_social_harmony.png"
-        },
-        {
-          "id": "nature",
-          "title": "自然和",
-          "subtitle": "外采成流，四时入怀",
-          "quote": "随江河起落，合天地吐纳；偕四时流转，共万物生息。",
-          "description": "顺应四时节律，与自然界保持呼应，让身心在环境中得以复原与滋养。",
-          "keywords": ["自然连接", "天地能量", "四季智慧", "生态意识"],
-          "image": "/src/assets/article_nature_harmony.png"
-        },
-        {
-          "id": "energy",
-          "title": "能量和",
-          "subtitle": "内炼成炉，能量充盈",
-          "quote": "回归身体的根，守住生命的气。",
-          "description": "调顺身体核心的生理与心理联结，让呼吸、气血与意识同频，稳住生命的根。",
-          "keywords": ["能量调和", "身心灵统一", "生命力流动", "正念练习"],
-          "image": "/src/assets/article_energy_harmony.png"
-        },
-        {
-          "id": "frequency",
-          "title": "共频和",
-          "subtitle": "内合成一，同频共振",
-          "quote": "在同频共振中，我们共舞、共生、共创、共进、共赢、共享，共鸣于心，共存于世。",
-          "description": "让个体与群体、系统、智能体在频率上共振，实现资源与力量的最佳流动。",
-          "keywords": ["宇宙共振", "频率同步", "万物一体", "宇宙意识"],
-          "image": "/src/assets/article_frequency_harmony.png"
-        },
-        {
-          "id": "selfless",
-          "title": "无我和",
-          "subtitle": "无边无际，无处不在",
-          "quote": "不再执着于存在，我开始真正存在。",
-          "description": "超越自我限定，融入万物的自由流动，无内无外，无边无际；无拘无束，无处不在；心无所往，自然而然，生生不息。",
-          "keywords": ["无我境界", "超越二元", "纯粹存在", "终极解脱"],
-          "image": "/src/assets/article_no_self_harmony.png"
-        }
-      ]
+    "self": {
+      "zh": {
+        "name": "自我和",
+        "title": "意识的和谐",
+        "essence": "内省成镜，心光自明",
+        "path": "自省一念，练习「自我和」",
+        "heart_language": "脱下伪装，活出真实，看似脆弱，却无比自在。",
+        "description": "与内在自我对话，让情绪、认知与行动保持一致，减少内耗，活出真实的自己。",
+        "keywords": ["自我接纳", "内在平衡", "阴影整合", "自我觉察"],
+        "emoji": "🌅"
+      },
+      "en": {
+        "name": "Self Harmony",
+        "title": "Harmony of Consciousness",
+        "essence": "Inner reflection becomes mirror, heart light self-illuminates",
+        "path": "Self-reflection in one thought, practice 'Self Harmony'",
+        "heart_language": "Remove the disguise, live authentically, seemingly vulnerable, yet infinitely free.",
+        "description": "Dialogue with the inner self, keeping emotions, cognition and actions consistent, reducing internal friction, living as your true self.",
+        "keywords": ["Self-acceptance", "Inner balance", "Shadow integration", "Self-awareness"],
+        "emoji": "🌅"
+      }
     },
-    "en": {
-      "title": "Six Harmony Elements",
-      "description": "Complete system of Harmony in Mind, Clarity in Return",
-      "items": [
-        {
-          "id": "self",
-          "title": "Self Harmony",
-          "subtitle": "Inner reflection becomes mirror, heart light self-illuminates",
-          "quote": "Remove the mask, live authentically, seemingly vulnerable, yet infinitely free.",
-          "description": "Dialogue with the inner self, keeping emotions, cognition, and actions aligned, reducing internal friction, living as your true self.",
-          "keywords": ["Self-acceptance", "Inner balance", "Shadow integration", "Self-awareness"],
-          "image": "/src/assets/article_self_harmony.png"
-        },
-        {
-          "id": "social",
-          "title": "Social Harmony",
-          "subtitle": "External connection becomes bridge, no separation between beings",
-          "quote": "Reduce internal friction, maintain equanimity; resonate with each other, achieve together.",
-          "description": "Maintain balance in interactions with others, neither swept away by external forces nor deliberately opposing.",
-          "keywords": ["Interpersonal harmony", "Compassionate psychology", "Understanding tolerance", "Relationship balance"],
-          "image": "/src/assets/article_social_harmony.png"
-        },
-        {
-          "id": "nature",
-          "title": "Nature Harmony",
-          "subtitle": "External gathering becomes flow, four seasons embrace",
-          "quote": "Rise and fall with rivers, breathe with heaven and earth; flow with four seasons, live with all beings.",
-          "description": "Follow the rhythms of the four seasons, maintain resonance with nature, allowing body and mind to restore and nourish in the environment.",
-          "keywords": ["Nature connection", "Heaven-earth energy", "Seasonal wisdom", "Ecological consciousness"],
-          "image": "/src/assets/article_nature_harmony.png"
-        },
-        {
-          "id": "energy",
-          "title": "Energy Harmony",
-          "subtitle": "Internal cultivation becomes furnace, energy abundant",
-          "quote": "Return to the root of the body, guard the qi of life.",
-          "description": "Harmonize the core physiological and psychological connections of the body, synchronize breath, qi-blood, and consciousness, stabilizing the root of life.",
-          "keywords": ["Energy harmonization", "Body-mind-spirit unity", "Life force flow", "Mindfulness practice"],
-          "image": "/src/assets/article_energy_harmony.png"
-        },
-        {
-          "id": "frequency",
-          "title": "Frequency Harmony",
-          "subtitle": "Internal unity becomes one, same frequency resonance",
-          "quote": "In same-frequency resonance, we dance together, live together, create together, advance together, win together, share together, resonate in heart, coexist in world.",
-          "description": "Allow individuals to resonate with groups, systems, and intelligent entities in frequency, achieving optimal flow of resources and power.",
-          "keywords": ["Cosmic resonance", "Frequency synchronization", "Unity of all things", "Cosmic consciousness"],
-          "image": "/src/assets/article_frequency_harmony.png"
-        },
-        {
-          "id": "selfless",
-          "title": "Selfless Harmony",
-          "subtitle": "Boundless and limitless, present everywhere",
-          "quote": "No longer clinging to existence, I begin to truly exist.",
-          "description": "Transcend self-limitation, merge into the free flow of all things, no inside or outside, boundless and limitless; unrestrained and unconstrained, present everywhere; heart goes nowhere, naturally spontaneous, eternally alive.",
-          "keywords": ["Selfless realm", "Transcending duality", "Pure existence", "Ultimate liberation"],
-          "image": "/src/assets/article_no_self_harmony.png"
-        }
-      ]
+    "social": {
+      "zh": {
+        "name": "社会和",
+        "title": "关系的和谐",
+        "essence": "外连成桥，众生无隔",
+        "path": "理解一瞬，铺垫「社会和」",
+        "heart_language": "减少内耗，保持坦然；彼此共鸣，彼此成就。",
+        "description": "在与他人的交往中保持平衡，不被外界裹挟，也不刻意对抗。",
+        "keywords": ["人际和谐", "慈悲心", "理解包容", "关系平衡"],
+        "emoji": "🪞"
+      },
+      "en": {
+        "name": "Social Harmony",
+        "title": "Harmony of Relationships",
+        "essence": "External connection becomes bridge, all beings without separation",
+        "path": "Understanding in one moment, laying foundation for 'Social Harmony'",
+        "heart_language": "Reduce internal friction, maintain composure; resonate with each other, achieve together.",
+        "description": "Maintain balance in interactions with others, neither being swept away by external forces nor deliberately opposing.",
+        "keywords": ["Interpersonal harmony", "Compassion", "Understanding", "Relationship balance"],
+        "emoji": "🪞"
+      }
+    },
+    "nature": {
+      "zh": {
+        "name": "自然和",
+        "title": "环境的和谐",
+        "essence": "外采成流，四时入怀",
+        "path": "顺应一息，回归「自然和」",
+        "heart_language": "随江河起落，合天地吐纳；偕四时流转，共万物生息。",
+        "description": "顺应四时节律，与自然界保持呼应，让身心在环境中得以复原与滋养。",
+        "keywords": ["自然连接", "天地能量", "四季智慧", "生态意识"],
+        "emoji": "🍃"
+      },
+      "en": {
+        "name": "Nature Harmony",
+        "title": "Harmony of Environment",
+        "essence": "External gathering becomes flow, four seasons embrace",
+        "path": "Follow one breath, return to 'Nature Harmony'",
+        "heart_language": "Rise and fall with rivers, breathe with heaven and earth; flow with four seasons, live with all things.",
+        "description": "Follow the rhythm of four seasons, maintain resonance with nature, allowing body and mind to restore and nourish in the environment.",
+        "keywords": ["Nature connection", "Earth energy", "Seasonal wisdom", "Ecological awareness"],
+        "emoji": "🍃"
+      }
+    },
+    "energy": {
+      "zh": {
+        "name": "能量和",
+        "title": "核心的和谐",
+        "essence": "内炼成炉，能量充盈",
+        "path": "调养一日，充盈「能量和」",
+        "heart_language": "回归身体的根，守住生命的气。",
+        "description": "调顺身体核心的生理与心理联结，让呼吸、气血与意识同频，稳住生命的根。",
+        "keywords": ["能量调和", "身心灵统一", "生命力流动", "正念练习"],
+        "emoji": "💓"
+      },
+      "en": {
+        "name": "Energy Harmony",
+        "title": "Harmony of Core",
+        "essence": "Internal cultivation becomes furnace, energy abundant",
+        "path": "Nurture one day, fulfill 'Energy Harmony'",
+        "heart_language": "Return to the root of the body, guard the qi of life.",
+        "description": "Harmonize the physiological and psychological connection of the body's core, let breathing, qi-blood and consciousness synchronize, stabilize the 'root' of life.",
+        "keywords": ["Energy balance", "Body-mind-spirit unity", "Life force flow", "Mindfulness practice"],
+        "emoji": "💓"
+      }
+    },
+    "frequency": {
+      "zh": {
+        "name": "共频和",
+        "title": "协作的和谐",
+        "essence": "内合成一，同频共振",
+        "path": "同频一场，凝聚「共频和」",
+        "heart_language": "在同频共振中，我们共舞、共生、共创、共进、共赢、共享，共鸣于心，共存于世。",
+        "description": "让个体与群体、系统、智能体在频率上共振，实现资源与力量的最佳流动。",
+        "keywords": ["宇宙共振", "频率同步", "万物一体", "宇宙意识"],
+        "emoji": "📡"
+      },
+      "en": {
+        "name": "Frequency Harmony",
+        "title": "Harmony of Collaboration",
+        "essence": "Internal unity becomes one, same frequency resonance",
+        "path": "Same frequency in one field, condense 'Frequency Harmony'",
+        "heart_language": "In same frequency resonance, we dance together, live together, create together, advance together, win together, share together, resonate in heart, coexist in world.",
+        "description": "Let individuals resonate with groups, systems, and intelligent entities in frequency, achieving optimal flow of resources and forces.",
+        "keywords": ["Universal resonance", "Frequency sync", "Universal oneness", "Cosmic consciousness"],
+        "emoji": "📡"
+      }
+    },
+    "noself": {
+      "zh": {
+        "name": "无我和",
+        "title": "存在的和谐",
+        "essence": "无边无际，无处不在",
+        "path": "放下一心，抵达「无我和」",
+        "heart_language": "不再执着于存在，我开始真正存在。",
+        "description": "超越自我限定，融入万物的自由流动，无内无外，无边无际；无拘无束，无处不在；心无所往，自然而然，生生不息。",
+        "keywords": ["无我境界", "超越二元", "纯粹存在", "终极解脱"],
+        "emoji": "🌌"
+      },
+      "en": {
+        "name": "Egoless Harmony",
+        "title": "Harmony of Existence",
+        "essence": "Boundless limitless, omnipresent",
+        "path": "Let go of one mind, arrive at 'Egoless Harmony'",
+        "heart_language": "No longer attached to existence, I begin to truly exist.",
+        "description": "Transcend self-limitation, merge into the free flow of all things, no inside no outside, boundless limitless; unrestrained unbounded, omnipresent; mind goes nowhere, naturally spontaneous, eternally regenerating.",
+        "keywords": ["Egoless state", "Beyond duality", "Pure being", "Ultimate liberation"],
+        "emoji": "🌌"
+      }
     }
   },
   "articles": [
     {
       "id": 1,
-      "slug": "opening",
+      "slug": "awakening-path",
       "zh": {
         "title": "开篇｜觉醒之路，从和开始",
-        "subtitle": "以合为途，以和为归",
-        "summary": "真正的觉醒，并不是一场剧烈的革命，也不是一次惊天动地的重生。而是一个温柔的过程——从分离走向融合，从冲突走向和谐。",
-        "content": "在这个纷繁的世界里，许多人都在寻找觉醒的道路。但我发现，真正的觉醒，并不是一场剧烈的革命，也不是一次惊天动地的重生。而是一个温柔的过程——从分离走向融合，从冲突走向和谐。这条路，我称之为——心沐六和。",
-        "keywords": ["觉醒", "融合", "和谐", "修行", "内在探索"]
+        "subtitle": "觉醒之路的起点",
+        "description": "在这个充满分裂与对立的世界中，我们如何找回内心的平静与和谐？本篇文章将为您开启一扇通往内在觉醒的大门。",
+        "content": "在这个快节奏的时代，我们常常迷失在外在的纷扰中，忘记了内心的声音。觉醒之路，从和开始，这不仅是一个理念，更是一种生活方式的选择。",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485706&idx=1&sn=1d0ba17640074dcea968a74201371fb0"
       },
       "en": {
         "title": "Opening | The Path of Awakening Begins with Harmony",
-        "subtitle": "Taking Unity as the Path, Harmony as the Destination",
-        "summary": "True awakening is not a violent revolution or earth-shattering rebirth, but a gentle process—moving from separation to integration, from conflict to harmony.",
-        "content": "In this complex world, many people are searching for the path of awakening. But I have discovered that true awakening is not a violent revolution or earth-shattering rebirth. It is a gentle process—moving from separation to integration, from conflict to harmony. This path, I call it—Ximory Six Harmonies.",
-        "keywords": ["awakening", "integration", "harmony", "cultivation", "inner exploration"]
+        "subtitle": "The Starting Point of Awakening",
+        "description": "In this world full of division and opposition, how do we find inner peace and harmony? This article opens a door to inner awakening.",
+        "content": "In this fast-paced era, we often lose ourselves in external distractions, forgetting our inner voice. The path of awakening begins with harmony - this is not just a concept, but a lifestyle choice.",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485706&idx=1&sn=1d0ba17640074dcea968a74201371fb0"
       },
-      "date": "2025-07-26",
-      "readTime": 5,
-      "image": "/src/assets/article_awakening_path.png",
-      "wechatUrl": "https://mp.weixin.qq.com/s/example1",
-      "status": "published"
+      "date": "07/26",
+      "harmony": "awakening",
+      "image": "article_awakening_path.png"
+    },
+    {
+      "id": 2,
+      "slug": "self-harmony",
+      "zh": {
+        "title": "第一篇｜自我和",
+        "subtitle": "与自己的和解",
+        "description": "真正的和谐始于与自己的和解，接纳自己的光明与阴影。当我们学会与内在的各个面向和平共处时，就为更高层次的和谐奠定了基础。",
+        "content": "自我和是六和中的第一层，也是最基础的一层。它要求我们诚实地面对自己，接纳自己的完整性，包括那些我们不愿意承认的部分。",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw=="
+      },
+      "en": {
+        "title": "Chapter 1 | Self Harmony",
+        "subtitle": "Reconciliation with Oneself",
+        "description": "True harmony begins with reconciliation with oneself, accepting both our light and shadow. When we learn to peacefully coexist with all aspects of our inner being, we lay the foundation for higher levels of harmony.",
+        "content": "Self harmony is the first and most fundamental level of the six harmonies. It requires us to honestly face ourselves and accept our wholeness, including those parts we are reluctant to acknowledge.",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw=="
+      },
+      "date": "1 week ago",
+      "harmony": "self",
+      "image": "article_self_harmony.png"
+    },
+    {
+      "id": 3,
+      "slug": "social-harmony",
+      "zh": {
+        "title": "第二篇｜社会和",
+        "subtitle": "人际关系的和谐",
+        "description": "当我们在内心找到平衡后，如何将这份和谐延伸到人际关系中？社会和教导我们在复杂的人际网络中保持内心的宁静。",
+        "content": "社会和是自我和的自然延伸。当我们与自己和谐相处后，我们才能真正地与他人建立健康、平衡的关系。",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw=="
+      },
+      "en": {
+        "title": "Chapter 2 | Social Harmony",
+        "subtitle": "Harmony in Relationships",
+        "description": "After finding balance within ourselves, how do we extend this harmony to interpersonal relationships? Social harmony teaches us to maintain inner peace in complex social networks.",
+        "content": "Social harmony is a natural extension of self harmony. Only when we are in harmony with ourselves can we truly establish healthy, balanced relationships with others.",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw=="
+      },
+      "date": "5天前",
+      "harmony": "social",
+      "image": "article_social_harmony.png"
+    },
+    {
+      "id": 4,
+      "slug": "nature-harmony",
+      "zh": {
+        "title": "第三篇｜自然和",
+        "subtitle": "与自然的深度连接",
+        "description": "自然和引导我们重新连接大地母亲，感受四季轮回的智慧。在自然的怀抱中，我们学会放慢脚步，聆听内心最深层的声音。",
+        "content": "自然和提醒我们，我们不是独立于自然之外的存在，而是自然的一部分。通过与自然的深度连接，我们找回了内在的平衡与和谐。",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw=="
+      },
+      "en": {
+        "title": "Chapter 3 | Nature Harmony",
+        "subtitle": "Deep Connection with Nature",
+        "description": "Nature harmony guides us to reconnect with Mother Earth, feeling the wisdom of seasonal cycles. In nature's embrace, we learn to slow down and listen to our deepest inner voice.",
+        "content": "Nature harmony reminds us that we are not separate from nature, but part of it. Through deep connection with nature, we rediscover inner balance and harmony.",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw=="
+      },
+      "date": "4天前",
+      "harmony": "nature",
+      "image": "article_nature_harmony.png"
+    },
+    {
+      "id": 5,
+      "slug": "energy-harmony",
+      "zh": {
+        "title": "第四篇｜能量和",
+        "subtitle": "内在能量的调和平衡",
+        "description": "能量和教导我们如何调和身心灵的能量流动，通过呼吸、冥想和正念练习，让生命力在体内自由流淌。",
+        "content": "能量和是更深层次的修行，它涉及到我们对生命能量的理解和运用。通过各种修行方法，我们学会调和内在的能量流动。",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw=="
+      },
+      "en": {
+        "title": "Chapter 4 | Energy Harmony",
+        "subtitle": "Harmonizing Inner Energy Flow",
+        "description": "Energy harmony teaches us how to balance the energy flow of body, mind, and spirit. Through breathing, meditation, and mindfulness practices, we allow life force to flow freely within.",
+        "content": "Energy harmony is a deeper level of practice that involves our understanding and application of life energy. Through various cultivation methods, we learn to harmonize inner energy flow.",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw=="
+      },
+      "date": "2天前",
+      "harmony": "energy",
+      "image": "article_energy_harmony.png"
+    },
+    {
+      "id": 6,
+      "slug": "frequency-harmony",
+      "zh": {
+        "title": "第五篇｜共频和",
+        "subtitle": "宇宙频率的同步共振",
+        "description": "共频和是更高维度的和谐状态，我们学会与宇宙的根本频率同步共振，感受万物一体的深刻真理。",
+        "content": "共频和将我们带入更高的意识层次，在这里我们不再是孤立的个体，而是宇宙整体的一部分，与万物共振。",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw=="
+      },
+      "en": {
+        "title": "Chapter 5 | Frequency Harmony",
+        "subtitle": "Synchronous Resonance with Universal Frequency",
+        "description": "Frequency harmony is a higher-dimensional state of harmony where we learn to synchronize with the fundamental frequencies of the universe, feeling the profound truth of universal oneness.",
+        "content": "Frequency harmony brings us to higher levels of consciousness, where we are no longer isolated individuals but part of the universal whole, resonating with all things.",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw=="
+      },
+      "date": "2 days ago",
+      "harmony": "frequency",
+      "image": "article_frequency_harmony.png"
+    },
+    {
+      "id": 7,
+      "slug": "noself-harmony",
+      "zh": {
+        "title": "第六篇｜无我和",
+        "subtitle": "超越自我的境界体验",
+        "description": "无我和是最深层的觉醒状态，在这里我们超越了自我的边界，体验到纯粹的存在本质。",
+        "content": "无我和是六和中最高的境界，它要求我们完全放下自我的执着，体验超越个体局限的宇宙意识。",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw=="
+      },
+      "en": {
+        "title": "Chapter 6 | Egoless Harmony",
+        "subtitle": "Transcendent Experience Beyond Self",
+        "description": "Egoless harmony is the deepest state of awakening, where we transcend the boundaries of the self and experience pure essence of being.",
+        "content": "Egoless harmony is the highest state among the six harmonies, requiring us to completely let go of ego attachments and experience cosmic consciousness beyond individual limitations.",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw=="
+      },
+      "date": "2 days ago",
+      "harmony": "noself",
+      "image": "article_no_self_harmony.png"
+    },
+    {
+      "id": 8,
+      "slug": "return-harmony",
+      "zh": {
+        "title": "归和｜念和在心·归和而明",
+        "subtitle": "心沐六和的总体思想",
+        "description": "归和是心沐六和的总体思想和核心理念。念和在心，归和而明，这八个字概括了整个修行的精髓，是六和的总结与升华。本篇详细阐述了六和的完整要素体系，每个和都有其境界、路径、心语和描述，为修行者提供了完整的实践指南。",
+        "content": "念和在心·归和而明，这是心沐六和的总体思想。本篇文章是整个专栏的精华总结，详细阐述了六和的完整要素：自我和（内省成镜·心光自明）、社会和（外连成桥·众生无隔）、自然和（外采成流·四时入怀）、能量和（内炼成炉·能量充盈）、共频和（内合成一·同频共振）、无我和（无边无际·无处不在）。每个和都包含境界、路径、心语和详细描述，构成了一个完整的修行体系。",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485706&idx=1&sn=1d0ba17640074dcea968a74201371fb0&chksm=969ccacaa1eb43dc32c7ed03f16c3c29c0b42d8984f76eae2681ef6961eb14623c857e8cfec4&scene=178&cur_album_id=4092359222594060293"
+      },
+      "en": {
+        "title": "Return Harmony | Harmony in Mind · Clarity in Return",
+        "subtitle": "The Overall Philosophy of Ximory Six Harmonies",
+        "description": "Return harmony is the overall philosophy and core concept of Ximory Six Harmonies. Harmony in mind, clarity in return - these eight characters encapsulate the essence of the entire practice, serving as the synthesis and sublimation of the six harmonies. This article provides a complete system of elements for each harmony.",
+        "content": "Harmony in Mind · Clarity in Return is the overall philosophy of Ximory Six Harmonies. This article is the essence summary of the entire column, detailing the complete elements of the six harmonies: Self Harmony (Inner reflection becomes mirror · Heart light self-illuminates), Social Harmony (External connection becomes bridge · All beings without separation), Nature Harmony (External gathering becomes flow · Four seasons embrace), Energy Harmony (Internal cultivation becomes furnace · Energy abundant), Frequency Harmony (Internal unity becomes one · Same frequency resonance), Egoless Harmony (Boundless limitless · Omnipresent). Each harmony contains realm, path, heart language and detailed description, forming a complete cultivation system.",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485706&idx=1&sn=1d0ba17640074dcea968a74201371fb0&chksm=969ccacaa1eb43dc32c7ed03f16c3c29c0b42d8984f76eae2681ef6961eb14623c857e8cfec4&scene=178&cur_album_id=4092359222594060293"
+      },
+      "date": "Yesterday",
+      "harmony": "return",
+      "image": "article_awakening_path.png"
     }
-  ]
-};
+  ],
+  "about": {
+    "zh": {
+      "title": "关于专栏",
+      "subtitle": "了解心沐六和的理念与使命",
+      "concept": {
+        "title": "专栏理念",
+        "content": "心沐六和专栏诞生于对现代人精神困境的深度思考。在这个物质丰富却精神匮乏的时代，我们比任何时候都需要找回内在的和谐与平静。\n\n六和代表着六个层次的和谐状态：自我和、社会和、自然和、能量和、共频和、无我和。每个层次都有其独特的修行方法与深刻内涵，它们相互关联，层层递进，最终通过归和达到完整的觉醒状态。\n\n我们相信，真正的觉醒不是逃离世界，而是在世界中找到内心的宁静；不是征服自然，而是与万物和谐共处。"
+      },
+      "mission": {
+        "title": "专栏使命",
+        "items": [
+          "为现代人提供一条通往内在觉醒的实践道路",
+          "传承东方智慧，结合现代心理学洞察",
+          "帮助读者在快节奏的生活中找到内心平静",
+          "促进个人成长与社会和谐的良性循环"
+        ]
+      }
+    },
+    "en": {
+      "title": "About the Column",
+      "subtitle": "Understanding the Philosophy and Mission of 'Ximory Six Harmonies'",
+      "concept": {
+        "title": "Column Philosophy",
+        "content": "The 'Ximory Six Harmonies' column was born from deep reflection on the spiritual predicament of modern people. In this era of material abundance yet spiritual poverty, we need more than ever to rediscover inner harmony and peace.\n\n'Six Harmonies' represents six levels of harmonious states: Self Harmony, Social Harmony, Nature Harmony, Energy Harmony, Frequency Harmony, and Egoless Harmony. Each level has its unique cultivation methods and profound meanings. They are interconnected and progressive, ultimately achieving complete awakening through 'Return Harmony'.\n\nWe believe that true awakening is not about escaping the world, but finding inner peace within it; not conquering nature, but living in harmony with all things."
+      },
+      "mission": {
+        "title": "Column Mission",
+        "items": [
+          "Provide modern people with a practical path to inner awakening",
+          "Inherit Eastern wisdom combined with modern psychological insights",
+          "Help readers find inner peace in fast-paced life",
+          "Promote a positive cycle of personal growth and social harmony"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "zh": {
+      "title": "联系我们",
+      "subtitle": "与我们一起探索内在觉醒的道路",
+      "wechat": {
+        "title": "关注我们",
+        "description": "想要获得更多关于心沐六和的内容和更新，请关注我们的微信公众号心沐日月。"
+      },
+      "interaction": {
+        "title": "互动交流",
+        "description": "我们欢迎读者的反馈和交流。如果您在阅读过程中有任何感悟，疑问或建议，都可以通过公众号与我们联系。每一份真诚的交流都是我们前进的动力。"
+      },
+      "disclaimer": {
+        "title": "版权声明",
+        "description": "本专栏所有内容均为原创，版权归心沐日月公众号所有。欢迎分享转载，但请注明出处并保持内容完整性。"
+      },
+      "quote": "让我们一起在和的智慧中，找到生命的真谛。"
+    },
+    "en": {
+      "title": "Contact Us",
+      "subtitle": "Join us in exploring the path of inner awakening",
+      "wechat": {
+        "title": "Follow Us",
+        "description": "To receive more content and updates about 'Ximory Six Harmonies', please follow our WeChat official account 'Xinmu Riyue'."
+      },
+      "interaction": {
+        "title": "Interactive Communication",
+        "description": "We welcome feedback and communication from readers. If you have any insights, questions, or suggestions while reading, you can contact us through our official account. Every sincere exchange is our motivation to move forward."
+      },
+      "disclaimer": {
+        "title": "Copyright Notice",
+        "description": "All content in this column is original and copyrighted by the 'Xinmu Riyue' official account. Sharing and reprinting are welcome, but please cite the source and maintain content integrity."
+      },
+      "quote": "Let us together find the true meaning of life in the wisdom of 'harmony'."
+    }
+  }
+}
 
