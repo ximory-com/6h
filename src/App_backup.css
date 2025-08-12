@@ -1,0 +1,234 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #fafafa;
+  --foreground: #2c3e50;
+  --card: #ffffff;
+  --card-foreground: #2c3e50;
+  --popover: #ffffff;
+  --popover-foreground: #2c3e50;
+  --primary: #2c3e50;
+  --primary-foreground: #fafafa;
+  --secondary: #e8f5e8;
+  --secondary-foreground: #2c3e50;
+  --muted: #f8f9fa;
+  --muted-foreground: #95a5a6;
+  --accent: #f39c12;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #ecf0f1;
+  --input: #ecf0f1;
+  --ring: #95a5a6;
+  --chart-1: #27ae60;
+  --chart-2: #3498db;
+  --chart-3: #9b59b6;
+  --chart-4: #f39c12;
+  --chart-5: #e74c3c;
+  --sidebar: #fafafa;
+  --sidebar-foreground: #2c3e50;
+  --sidebar-primary: #2c3e50;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #e8f5e8;
+  --sidebar-accent-foreground: #2c3e50;
+  --sidebar-border: #ecf0f1;
+  --sidebar-ring: #95a5a6;
+}
+
+.dark {
+  --background: #2c3e50;
+  --foreground: #fafafa;
+  --card: #34495e;
+  --card-foreground: #fafafa;
+  --popover: #34495e;
+  --popover-foreground: #fafafa;
+  --primary: #ecf0f1;
+  --primary-foreground: #2c3e50;
+  --secondary: #34495e;
+  --secondary-foreground: #fafafa;
+  --muted: #34495e;
+  --muted-foreground: #95a5a6;
+  --accent: #f39c12;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #95a5a6;
+  --chart-1: #27ae60;
+  --chart-2: #3498db;
+  --chart-3: #9b59b6;
+  --chart-4: #f39c12;
+  --chart-5: #e74c3c;
+  --sidebar: #2c3e50;
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: #3498db;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #34495e;
+  --sidebar-accent-foreground: #fafafa;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #95a5a6;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  }
+}
+
+/* 自定义样式 */
+.hero-background {
+  background-image: linear-gradient(rgba(44, 62, 80, 0.3), rgba(44, 62, 80, 0.3)), url('./assets/hero_background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.article-card {
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.article-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* 中文字体优化 */
+.font-chinese {
+  font-family: 'Source Han Serif SC', 'Noto Serif CJK SC', serif;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #2c3e50, #27ae60);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  .hero-background {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  /* 移动端背景图优化 */
+  section[style*="background-image"] {
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  
+  /* 移动端文字优化 */
+  .text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-xl {
+    font-size: 1.125rem;
+  }
+  
+  /* 移动端间距优化 */
+  .py-20 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .py-16 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 480px) {
+  .text-5xl {
+    font-size: 2rem;
+  }
+  
+  .text-xl {
+    font-size: 1rem;
+  }
+  
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* 背景图性能优化 */
+.hero-section {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* 图片懒加载优化 */
+img {
+  loading: lazy;
+}
+
