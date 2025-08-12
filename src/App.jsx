@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 // 导入配置数据
-import contentData from './config/contentData.js'
+import { contentData } from './config/contentData.js'
 
 // 导入图片
 import heroBackground from './assets/hero_background_optimized.png'
