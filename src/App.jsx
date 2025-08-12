@@ -6,9 +6,14 @@ import heroBackground from './assets/hero_background_optimized.png'
 import overviewZh from './assets/overview_zh.png'
 import overviewEn from './assets/overview_en.png'
 
+// 导入组件
+import ArticleList from './components/ArticleList'
+import ArticleDetail from './components/ArticleDetail'
+
 function App() {
   const [language, setLanguage] = useState('zh')
   const [currentPage, setCurrentPage] = useState('home')
+  const [selectedArticle, setSelectedArticle] = useState(null)
 
   // 六和要素数据
   const harmoniesData = {
@@ -119,6 +124,18 @@ function App() {
     return language === 'zh' ? overviewZh : overviewEn
   }
 
+  // 处理文章选择
+  const handleArticleSelect = (article) => {
+    setSelectedArticle(article)
+    setCurrentPage('article-detail')
+  }
+
+  // 处理返回文章列表
+  const handleBackToArticles = () => {
+    setSelectedArticle(null)
+    setCurrentPage('articles')
+  }
+
   // 六和要素卡片组件
   const HarmonyCard = ({ harmony }) => (
     <div className="harmony-card">
@@ -198,12 +215,88 @@ function App() {
     </div>
   )
 
-  // 其他页面占位
-  const OtherPage = ({ title }) => (
-    <div className="page">
+  // 关于页面
+  const AboutPage = () => (
+    <div className="page about-page">
       <div className="container">
-        <h1>{title}</h1>
-        <p>{language === 'zh' ? '页面正在开发中...' : 'Page under development...'}</p>
+        <h1>{language === 'zh' ? '关于专栏' : 'About the Column'}</h1>
+        <div className="about-content">
+          <div className="about-section">
+            <h2>{language === 'zh' ? '专栏使命' : 'Column Mission'}</h2>
+            <p>
+              {language === 'zh' 
+                ? '心沐六和专栏致力于探索一条温柔而深刻的觉醒之路。我们相信，真正的觉醒不是激烈的对抗，而是从分离走向融合，从冲突走向和谐的过程。'
+                : 'The Ximory Six Harmonies column is dedicated to exploring a gentle yet profound path of awakening. We believe that true awakening is not fierce confrontation, but a process from separation to integration, from conflict to harmony.'
+              }
+            </p>
+          </div>
+          
+          <div className="about-section">
+            <h2>{language === 'zh' ? '核心理念' : 'Core Philosophy'}</h2>
+            <p className="core-philosophy-text">
+              {language === 'zh' ? '念和在心·归和而明' : 'Harmony in Mind · Clarity in Return'}
+            </p>
+            <p>
+              {language === 'zh' 
+                ? '这是我们的总体思想。通过六个维度的和谐修行——自我和、社会和、自然和、能量和、共频和、无我和，最终达到内在觉醒与宇宙和谐的统一状态。'
+                : 'This is our overall philosophy. Through six dimensions of harmonious cultivation—Self Harmony, Social Harmony, Nature Harmony, Energy Harmony, Frequency Harmony, Egoless Harmony—ultimately achieving a unified state of inner awakening and cosmic harmony.'
+              }
+            </p>
+          </div>
+
+          <div className="about-section">
+            <h2>{language === 'zh' ? '适合人群' : 'Suitable Audience'}</h2>
+            <ul>
+              <li>{language === 'zh' ? '寻求内在成长和觉醒的探索者' : 'Seekers of inner growth and awakening'}</li>
+              <li>{language === 'zh' ? '希望改善人际关系的朋友' : 'Friends hoping to improve interpersonal relationships'}</li>
+              <li>{language === 'zh' ? '追求身心灵平衡的修行者' : 'Practitioners pursuing body-mind-spirit balance'}</li>
+              <li>{language === 'zh' ? '对东方哲学和现代心理学感兴趣的读者' : 'Readers interested in Eastern philosophy and modern psychology'}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+
+  // 联系页面
+  const ContactPage = () => (
+    <div className="page contact-page">
+      <div className="container">
+        <h1>{language === 'zh' ? '联系我们' : 'Contact Us'}</h1>
+        <div className="contact-content">
+          <div className="contact-section">
+            <h2>{language === 'zh' ? '微信公众号' : 'WeChat Public Account'}</h2>
+            <p className="contact-info">
+              <strong>{language === 'zh' ? '公众号名称' : 'Account Name'}:</strong> 心沐日月
+            </p>
+            <p>
+              {language === 'zh' 
+                ? '关注我们的微信公众号，获取最新的文章更新和深度思考。'
+                : 'Follow our WeChat public account for the latest article updates and deep reflections.'
+              }
+            </p>
+          </div>
+
+          <div className="contact-section">
+            <h2>{language === 'zh' ? '交流互动' : 'Communication & Interaction'}</h2>
+            <p>
+              {language === 'zh' 
+                ? '我们欢迎您的留言和分享。每一个真诚的交流，都是修行路上的相互滋养。'
+                : 'We welcome your messages and sharing. Every sincere exchange is mutual nourishment on the path of cultivation.'
+              }
+            </p>
+          </div>
+
+          <div className="contact-section">
+            <h2>{language === 'zh' ? '专栏理念' : 'Column Philosophy'}</h2>
+            <p className="philosophy-quote">
+              {language === 'zh' 
+                ? '"在这里，我们一起探索内在觉醒的道路，寻找生命的和谐与平衡。念和在心，归和而明。"'
+                : '"Here, we explore the path of inner awakening together, seeking harmony and balance in life. Harmony in Mind, Clarity in Return."'
+              }
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -214,11 +307,13 @@ function App() {
       case 'home':
         return <HomePage />
       case 'articles':
-        return <OtherPage title={language === 'zh' ? '专栏文章' : 'Articles'} />
+        return <ArticleList language={language} onArticleSelect={handleArticleSelect} />
+      case 'article-detail':
+        return <ArticleDetail article={selectedArticle} language={language} onBack={handleBackToArticles} />
       case 'about':
-        return <OtherPage title={language === 'zh' ? '关于专栏' : 'About'} />
+        return <AboutPage />
       case 'contact':
-        return <OtherPage title={language === 'zh' ? '联系我们' : 'Contact'} />
+        return <ContactPage />
       default:
         return <HomePage />
     }
@@ -240,7 +335,7 @@ function App() {
             {language === 'zh' ? '首页' : 'Home'}
           </button>
           <button 
-            className={currentPage === 'articles' ? 'active' : ''} 
+            className={currentPage === 'articles' || currentPage === 'article-detail' ? 'active' : ''} 
             onClick={() => setCurrentPage('articles')}
           >
             {language === 'zh' ? '专栏文章' : 'Articles'}
