@@ -36,14 +36,15 @@ main {
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 1rem 2rem;
+  padding: 0.75rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 60px;
 }
 
 .nav-brand h1 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #2c3e50;
   cursor: pointer;
@@ -56,18 +57,20 @@ main {
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .nav-links button {
   background: none;
   border: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #666;
   cursor: pointer;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 6px;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .nav-links button:hover,
@@ -79,17 +82,18 @@ main {
 /* 语言切换器 */
 .language-switcher {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.25rem;
 }
 
 .language-switcher button {
   background: none;
   border: 1px solid #ddd;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  min-width: 50px;
 }
 
 .language-switcher button:hover {
@@ -959,6 +963,87 @@ section h2 {
 
 /* 响应式设计优化 */
 @media (max-width: 768px) {
+  /* 导航栏移动端优化 */
+  .navigation {
+    padding: 0.5rem 0.75rem;
+    min-height: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-brand h1 {
+    font-size: 1.1rem;
+  }
+  
+  .nav-links {
+    gap: 0.5rem;
+    order: 3;
+    width: 100%;
+    margin-top: 0.5rem;
+    justify-content: center;
+  }
+  
+  .nav-links button {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .language-switcher {
+    gap: 0.25rem;
+  }
+  
+  .language-switcher button {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    min-width: 40px;
+  }
+  
+  /* Hero区域移动端优化 */
+  .hero {
+    padding: 3rem 1rem;
+    min-height: 60vh;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+  
+  .hero p {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+  }
+  
+  /* 容器移动端优化 */
+  .container {
+    padding: 0 15px;
+  }
+  
+  /* 卡片网格移动端优化 */
+  .harmony-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .harmony-card {
+    padding: 1.5rem;
+  }
+  
+  .harmony-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .harmony-card .subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .harmony-card .description {
+    font-size: 0.85rem;
+  }
+  
+  /* 文章页面移动端优化 */
   .articles-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -991,6 +1076,46 @@ section h2 {
   .article-footer .article-actions {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 480px) {
+  .navigation {
+    padding: 0.4rem 0.5rem;
+    min-height: 45px;
+  }
+  
+  .nav-brand h1 {
+    font-size: 1rem;
+  }
+  
+  .nav-links button {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .language-switcher button {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.4rem;
+    min-width: 35px;
+  }
+  
+  .hero {
+    padding: 2rem 0.75rem;
+    min-height: 50vh;
+  }
+  
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  
+  .hero h2 {
+    font-size: 1rem;
+  }
+  
+  .container {
+    padding: 0 10px;
   }
 }
 

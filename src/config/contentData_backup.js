@@ -5,16 +5,14 @@ export const contentData = {
       "subtitle": "念和在心·归和而明",
       "description": "在这个快节奏的时代，我们常常迷失在外在的纷扰中，忘记了内心的声音。心沐六和，是一次深入内心的探索之旅，带您从内在觉醒到宇宙和谐，走上一条完整的修行之路。",
       "cta": "开始探索",
-      "core_philosophy": "念和在心·归和而明",
-      "logo": "/src/assets/logo_concept.png"
+      "core_philosophy": "念和在心·归和而明"
     },
     "en": {
       "title": "Ximory Six Harmonies",
       "subtitle": "Harmony in Mind · Clarity in Return",
       "description": "In this fast-paced era, we often lose ourselves in external distractions, forgetting our inner voice. Ximory Six Harmonies is a journey of deep inner exploration, guiding you from inner awakening to cosmic harmony on a complete path of cultivation.",
       "cta": "Begin Exploration",
-      "core_philosophy": "Harmony in Mind · Clarity in Return",
-      "logo": "/src/assets/logo_concept.png"
+      "core_philosophy": "Harmony in Mind · Clarity in Return"
     }
   },
   "navigation": {
@@ -45,13 +43,11 @@ export const contentData = {
     "overview": {
       "zh": {
         "title": "六和总览",
-        "description": "心沐六和的完整体系图解",
-        "image": "/src/assets/中文.svg"
+        "description": "心沐六和的完整体系图解"
       },
       "en": {
         "title": "Six Harmonies Overview",
-        "description": "Complete system diagram of Ximory Six Harmonies",
-        "image": "/src/assets/英文.svg"
+        "description": "Complete system diagram of Ximory Six Harmonies"
       }
     },
     "articles": {
@@ -84,8 +80,8 @@ export const contentData = {
         "keywords": ["awakening", "integration", "harmony", "cultivation", "inner exploration"]
       },
       "date": "2025-07-26",
-      "image": "/src/assets/article_awakening_path.png",
-      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485706&idx=1&sn=1d0ba17640074dcea968a74201371fb0",
+      "image": "/src/assets/article_opening.png",
+      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485706&idx=1&sn=1d0ba17640074dcea968a74201371fb0&chksm=97a90faf4b3c764f4039d533130b30fb4630a199490cdb263e5d916c242dd456e449c14b2fc5&scene=178&cur_album_id=4092359222594060293#rd",
       "hasFullContent": true
     },
     {
@@ -107,7 +103,7 @@ export const contentData = {
       },
       "date": "2025-08-05",
       "image": "/src/assets/article_self_harmony.png",
-      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485634&idx=1&sn=e1e409e8bec7b279c255ae1ea46d42a5",
+      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485634&idx=1&sn=e1e409e8bec7b279c255ae1ea46d42a5&chksm=969cc4b0a1eb4da6&scene=178&cur_album_id=4092359222594060293#rd",
       "hasFullContent": true
     },
     {
@@ -129,7 +125,7 @@ export const contentData = {
       },
       "date": "2025-08-06",
       "image": "/src/assets/article_social_harmony.png",
-      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485319&idx=1&sn=b03929dca7deac1e9a56e169515bfc74",
+      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485319&idx=1&sn=b03929dca7deac1e9a56e169515bfc74&chksm=969cc447a1eb4d5199f98586541909e9845497e38be99b0188acfa7602efc393a233c7438341&scene=178&cur_album_id=4092359222594060293#rd",
       "hasFullContent": false
     },
     {
@@ -149,7 +145,7 @@ export const contentData = {
       },
       "date": "2025-08-07",
       "image": "/src/assets/article_nature_harmony.png",
-      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485XXX&idx=1&sn=XXXXXXX",
+      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485XXX&idx=1&sn=XXXXXXX&scene=178&cur_album_id=4092359222594060293#rd",
       "hasFullContent": false
     },
     {
@@ -169,7 +165,7 @@ export const contentData = {
       },
       "date": "2025-08-08",
       "image": "/src/assets/article_energy_harmony.png",
-      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485XXX&idx=1&sn=XXXXXXX",
+      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485XXX&idx=1&sn=XXXXXXX&scene=178&cur_album_id=4092359222594060293#rd",
       "hasFullContent": false
     },
     {
@@ -189,7 +185,7 @@ export const contentData = {
       },
       "date": "2025-08-09",
       "image": "/src/assets/article_frequency_harmony.png",
-      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485XXX&idx=1&sn=XXXXXXX",
+      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485XXX&idx=1&sn=XXXXXXX&scene=178&cur_album_id=4092359222594060293#rd",
       "hasFullContent": false
     },
     {
@@ -208,8 +204,8 @@ export const contentData = {
         "keywords": ["egoless harmony", "transcend", "all things", "freedom", "flow"]
       },
       "date": "2025-08-10",
-      "image": "/src/assets/article_no_self_harmony.png",
-      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485XXX&idx=1&sn=XXXXXXX",
+      "image": "/src/assets/article_egoless_harmony.png",
+      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485XXX&idx=1&sn=XXXXXXX&scene=178&cur_album_id=4092359222594060293#rd",
       "hasFullContent": false
     },
     {
@@ -228,8 +224,8 @@ export const contentData = {
         "keywords": ["return harmony", "harmony in mind", "six harmonies return to one", "awakening", "system"]
       },
       "date": "2025-08-11",
-      "image": "/src/assets/article_awakening_path.png",
-      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485XXX&idx=1&sn=XXXXXXX",
+      "image": "/src/assets/article_return_harmony.png",
+      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485XXX&idx=1&sn=XXXXXXX&scene=178&cur_album_id=4092359222594060293#rd",
       "hasFullContent": true
     }
   ],
@@ -242,8 +238,7 @@ export const contentData = {
         "path": "自省一念，练习「自我和」",
         "heart_language": "脱下伪装，活出真实，看似脆弱，却无比自在。",
         "description": "与内在自我对话，让情绪、认知与行动保持一致，减少内耗，活出真实的自己。",
-        "keywords": ["自我接纳", "内在平衡", "阴影整合", "自我觉察"],
-        "image": "/src/assets/article_self_harmony.png"
+        "keywords": ["自我接纳", "内在平衡", "阴影整合", "自我觉察"]
       },
       "en": {
         "name": "Self Harmony",
@@ -252,8 +247,7 @@ export const contentData = {
         "path": "Self-reflection in one thought, practice 'Self Harmony'",
         "heart_language": "Remove the disguise, live authentically, seemingly vulnerable, yet infinitely free.",
         "description": "Dialogue with the inner self, keeping emotions, cognition and actions consistent, reducing internal friction, living as your true self.",
-        "keywords": ["Self-acceptance", "Inner balance", "Shadow integration", "Self-awareness"],
-        "image": "/src/assets/article_self_harmony.png"
+        "keywords": ["Self-acceptance", "Inner balance", "Shadow integration", "Self-awareness"]
       }
     },
     "social": {
@@ -264,8 +258,7 @@ export const contentData = {
         "path": "理解一瞬，铺垫「社会和」",
         "heart_language": "减少内耗，保持坦然；彼此共鸣，彼此成就。",
         "description": "在与他人的交往中保持平衡，不被外界裹挟，也不刻意对抗。",
-        "keywords": ["人际和谐", "慈悲心", "理解包容", "关系平衡"],
-        "image": "/src/assets/article_social_harmony.png"
+        "keywords": ["人际和谐", "慈悲心", "理解包容", "关系平衡"]
       },
       "en": {
         "name": "Social Harmony",
@@ -274,8 +267,7 @@ export const contentData = {
         "path": "Understanding in one moment, laying foundation for 'Social Harmony'",
         "heart_language": "Reduce internal friction, maintain composure; resonate with each other, achieve together.",
         "description": "Maintain balance in interactions with others, neither being swept away by external forces nor deliberately opposing.",
-        "keywords": ["Interpersonal harmony", "Compassion", "Understanding", "Relationship balance"],
-        "image": "/src/assets/article_social_harmony.png"
+        "keywords": ["Interpersonal harmony", "Compassion", "Understanding", "Relationship balance"]
       }
     },
     "nature": {
@@ -286,8 +278,7 @@ export const contentData = {
         "path": "顺应一息，回归「自然和」",
         "heart_language": "随江河起落，合天地吐纳；偕四时流转，共万物生息。",
         "description": "顺应四时节律，与自然界保持呼应，让身心在环境中得以复原与滋养。",
-        "keywords": ["自然连接", "天地能量", "四季智慧", "生态意识"],
-        "image": "/src/assets/article_nature_harmony.png"
+        "keywords": ["自然连接", "天地能量", "四季智慧", "生态意识"]
       },
       "en": {
         "name": "Nature Harmony",
@@ -296,8 +287,7 @@ export const contentData = {
         "path": "Follow one breath, return to 'Nature Harmony'",
         "heart_language": "Rise and fall with rivers, breathe with heaven and earth; flow with four seasons, live with all things.",
         "description": "Follow the rhythm of four seasons, maintain resonance with nature, allowing body and mind to restore and nourish in the environment.",
-        "keywords": ["Nature connection", "Earth energy", "Seasonal wisdom", "Ecological awareness"],
-        "image": "/src/assets/article_nature_harmony.png"
+        "keywords": ["Nature connection", "Earth energy", "Seasonal wisdom", "Ecological awareness"]
       }
     },
     "energy": {
@@ -308,8 +298,7 @@ export const contentData = {
         "path": "调养一日，充盈「能量和」",
         "heart_language": "回归身体的根，守住生命的气。",
         "description": "调顺身体核心的生理与心理联结，让呼吸、气血与意识同频，稳住生命的根。",
-        "keywords": ["能量调和", "身心灵统一", "生命力流动", "正念练习"],
-        "image": "/src/assets/article_energy_harmony.png"
+        "keywords": ["能量调和", "身心灵统一", "生命力流动", "正念练习"]
       },
       "en": {
         "name": "Energy Harmony",
@@ -318,8 +307,7 @@ export const contentData = {
         "path": "Nurture one day, fulfill 'Energy Harmony'",
         "heart_language": "Return to the root of the body, guard the qi of life.",
         "description": "Harmonize the physiological and psychological connection of the body's core, let breathing, qi-blood and consciousness synchronize, stabilize the root of life.",
-        "keywords": ["Energy balance", "Body-mind-spirit unity", "Life force flow", "Mindfulness practice"],
-        "image": "/src/assets/article_energy_harmony.png"
+        "keywords": ["Energy balance", "Body-mind-spirit unity", "Life force flow", "Mindfulness practice"]
       }
     },
     "frequency": {
@@ -330,8 +318,7 @@ export const contentData = {
         "path": "同频一场，凝聚「共频和」",
         "heart_language": "在同频共振中，我们共舞、共生、共创、共进、共赢、共享，共鸣于心，共存于世。",
         "description": "让个体与群体、系统、智能体在频率上共振，实现资源与力量的最佳流动。",
-        "keywords": ["宇宙共振", "频率同步", "万物一体", "宇宙意识"],
-        "image": "/src/assets/article_frequency_harmony.png"
+        "keywords": ["宇宙共振", "频率同步", "万物一体", "宇宙意识"]
       },
       "en": {
         "name": "Frequency Harmony",
@@ -340,8 +327,7 @@ export const contentData = {
         "path": "Same frequency in one field, condense 'Frequency Harmony'",
         "heart_language": "In same frequency resonance, we dance together, live together, create together, advance together, win together, share together, resonate in heart, coexist in world.",
         "description": "Let individuals resonate with groups, systems, and intelligent entities in frequency, achieving optimal flow of resources and forces.",
-        "keywords": ["Universal resonance", "Frequency sync", "Universal oneness", "Cosmic consciousness"],
-        "image": "/src/assets/article_frequency_harmony.png"
+        "keywords": ["Universal resonance", "Frequency sync", "Universal oneness", "Cosmic consciousness"]
       }
     },
     "noself": {
@@ -352,8 +338,7 @@ export const contentData = {
         "path": "放下一心，抵达「无我和」",
         "heart_language": "不再执着于存在，我开始真正存在。",
         "description": "超越自我限定，融入万物的自由流动，无内无外，无边无际；无拘无束，无处不在；心无所往，自然而然，生生不息。",
-        "keywords": ["无我境界", "超越二元", "纯粹存在", "终极解脱"],
-        "image": "/src/assets/article_no_self_harmony.png"
+        "keywords": ["无我境界", "超越二元", "纯粹存在", "终极解脱"]
       },
       "en": {
         "name": "Egoless Harmony",
@@ -362,8 +347,7 @@ export const contentData = {
         "path": "Let go of one mind, arrive at 'Egoless Harmony'",
         "heart_language": "No longer attached to existence, I begin to truly exist.",
         "description": "Transcend self-limitation, merge into the free flow of all things, no inside no outside, boundless limitless; unrestrained unbounded, omnipresent; mind goes nowhere, naturally spontaneous, eternally regenerating.",
-        "keywords": ["Egoless state", "Beyond duality", "Pure being", "Ultimate liberation"],
-        "image": "/src/assets/article_no_self_harmony.png"
+        "keywords": ["Egoless state", "Beyond duality", "Pure being", "Ultimate liberation"]
       }
     }
   }
