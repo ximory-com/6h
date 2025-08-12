@@ -7,7 +7,7 @@ import { Menu, X, BookOpen, Heart, Users, Leaf, Zap, Radio, Eye, ArrowUp } from 
 import './App.css'
 
 // 导入图片
-import heroBackground from './assets/hero_background.png'
+import heroBackground from './assets/hero_background_optimized.png'
 import logoImage from './assets/logo_concept.png'
 import selfHarmonyImage from './assets/article_self_harmony.png'
 import socialHarmonyImage from './assets/article_social_harmony.png'
@@ -213,10 +213,10 @@ function App() {
       <section 
         className="min-h-screen flex items-center justify-center text-white relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(44, 62, 80, 0.4), rgba(44, 62, 80, 0.4)), url(${heroBackground})`,
+          backgroundImage: `linear-gradient(rgba(44, 62, 80, 0.5), rgba(44, 62, 80, 0.5)), url(${heroBackground})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          backgroundRepeat: 'no-repeat'
         }}
       >
         <div className="text-center max-w-4xl mx-auto px-4">
@@ -238,75 +238,14 @@ function App() {
       </section>
 
       {/* 专栏特色 */}
-      <section className="py-20 bg-secondary/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-chinese">专栏特色</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              一套完整的理论体系，一条实践的道路
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BookOpen className="w-6 h-6 text-blue-600" />
-                </div>
-                <CardTitle className="text-lg">系统性</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  从个人到宇宙，层层递进的完整体系
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-6 h-6 text-green-600" />
-                </div>
-                <CardTitle className="text-lg">实用性</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  理论与实践相结合，提供具体的修行指导
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-6 h-6 text-purple-600" />
-                </div>
-                <CardTitle className="text-lg">深度性</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  融合东方哲学智慧与现代心理学洞察
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Eye className="w-6 h-6 text-orange-600" />
-                </div>
-                <CardTitle className="text-lg">启发性</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  不仅传授知识，更激发内在的觉醒力量
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+      <section className="py-16 bg-secondary/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 font-chinese">专栏特色</h2>
+          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+            从内在觉醒到宇宙和谐，一条完整的修行之路
+          </p>
         </div>
       </section>
-
       {/* 最新文章预览 */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

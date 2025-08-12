@@ -168,3 +168,67 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  .hero-background {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  /* 移动端背景图优化 */
+  section[style*="background-image"] {
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  
+  /* 移动端文字优化 */
+  .text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-xl {
+    font-size: 1.125rem;
+  }
+  
+  /* 移动端间距优化 */
+  .py-20 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .py-16 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 480px) {
+  .text-5xl {
+    font-size: 2rem;
+  }
+  
+  .text-xl {
+    font-size: 1rem;
+  }
+  
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* 背景图性能优化 */
+.hero-section {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* 图片懒加载优化 */
+img {
+  loading: lazy;
+}
+
