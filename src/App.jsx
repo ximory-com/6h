@@ -1,545 +1,239 @@
-import React, { useState, useEffect } from 'react'
-import { Button } from '@/components/ui/button.jsx'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
-import { Badge } from '@/components/ui/badge.jsx'
-import { Separator } from '@/components/ui/separator.jsx'
-import { Menu, X, BookOpen, Heart, Users, Leaf, Zap, Radio, Eye, ArrowUp, ExternalLink } from 'lucide-react'
-import { LanguageProvider, useLanguage } from './contexts/LanguageContext'
-import LanguageSwitcher from './components/LanguageSwitcher'
-import HarmonyCard from './components/HarmonyCard'
+import React, { useState } from 'react'
 import './App.css'
 
-// 导入图片
-import heroBackground from './assets/hero_background_optimized.png'
-import overviewChartZh from './assets/overview_chart_chinese.png'
-import overviewChartEn from './assets/overview_chart_bilingual.png'
-import selfHarmonyImage from './assets/article_self_harmony.png'
-import socialHarmonyImage from './assets/article_social_harmony.png'
-import natureHarmonyImage from './assets/article_nature_harmony.png'
-import energyHarmonyImage from './assets/article_energy_harmony.png'
-import frequencyHarmonyImage from './assets/article_frequency_harmony.png'
-import noSelfHarmonyImage from './assets/article_no_self_harmony.png'
-import awakeningPathImage from './assets/article_awakening_path.png'
-
-const AppContent = () => {
-  const { t, getContent, language, isZh } = useLanguage()
-  const [currentSection, setCurrentSection] = useState('home')
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [showScrollTop, setShowScrollTop] = useState(false)
-
-  // 获取文章数据
-  const articles = getContent('articles') || []
-  
-  // 图片映射
-  const imageMap = {
-    'article_awakening_path.png': awakeningPathImage,
-    'article_self_harmony.png': selfHarmonyImage,
-    'article_social_harmony.png': socialHarmonyImage,
-    'article_nature_harmony.png': natureHarmonyImage,
-    'article_energy_harmony.png': energyHarmonyImage,
-    'article_frequency_harmony.png': frequencyHarmonyImage,
-    'article_no_self_harmony.png': noSelfHarmonyImage
-  }
-
-  // 获取文章图标
-  const getArticleIcon = (harmonyType) => {
-    const icons = {
-      awakening: BookOpen,
-      self: Heart,
-      social: Users,
-      nature: Leaf,
-      energy: Zap,
-      frequency: Radio,
-      noself: Eye,
-      return: ArrowUp
-    }
-    return icons[harmonyType] || BookOpen
-  }
-
-  // 获取文章颜色
-  const getArticleColor = (harmonyType) => {
-    const colors = {
-      awakening: "from-orange-400 to-red-500",
-      self: "from-blue-400 to-purple-500",
-      social: "from-pink-400 to-red-500",
-      nature: "from-green-400 to-teal-500",
-      energy: "from-purple-400 to-indigo-500",
-      frequency: "from-orange-400 to-yellow-500",
-      noself: "from-indigo-400 to-blue-500",
-      return: "from-gradient-to-r from-accent to-primary"
-    }
-    return colors[harmonyType] || "from-gray-400 to-gray-500"
-  }
-
-  // 滚动监听
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 300)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  // 滚动到顶部
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
-  // 导航组件
-  const Navigation = () => (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-border z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-4">
-            <h1 className="text-xl font-bold font-chinese text-primary">
-              {t('site.title')}
-            </h1>
-          </div>
-          
-          {/* 桌面端导航 */}
-          <div className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => setCurrentSection('home')}
-              className={`text-sm font-medium transition-colors ${
-                currentSection === 'home' ? 'text-primary' : 'text-muted-foreground hover:text-primary'
-              }`}
-            >
-              {t('navigation.home')}
-            </button>
-            <button
-              onClick={() => setCurrentSection('articles')}
-              className={`text-sm font-medium transition-colors ${
-                currentSection === 'articles' ? 'text-primary' : 'text-muted-foreground hover:text-primary'
-              }`}
-            >
-              {t('navigation.articles')}
-            </button>
-            <button
-              onClick={() => setCurrentSection('about')}
-              className={`text-sm font-medium transition-colors ${
-                currentSection === 'about' ? 'text-primary' : 'text-muted-foreground hover:text-primary'
-              }`}
-            >
-              {t('navigation.about')}
-            </button>
-            <button
-              onClick={() => setCurrentSection('contact')}
-              className={`text-sm font-medium transition-colors ${
-                currentSection === 'contact' ? 'text-primary' : 'text-muted-foreground hover:text-primary'
-              }`}
-            >
-              {t('navigation.contact')}
-            </button>
-            <LanguageSwitcher />
-          </div>
-
-          {/* 移动端菜单按钮 */}
-          <div className="md:hidden flex items-center space-x-2">
-            <LanguageSwitcher />
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md text-muted-foreground hover:text-primary"
-            >
-              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
-          </div>
-        </div>
-
-        {/* 移动端菜单 */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
-            <button
-              onClick={() => { setCurrentSection('home'); setIsMenuOpen(false) }}
-              className="block w-full text-left py-2 text-sm font-medium text-muted-foreground hover:text-primary"
-            >
-              {t('navigation.home')}
-            </button>
-            <button
-              onClick={() => { setCurrentSection('articles'); setIsMenuOpen(false) }}
-              className="block w-full text-left py-2 text-sm font-medium text-muted-foreground hover:text-primary"
-            >
-              {t('navigation.articles')}
-            </button>
-            <button
-              onClick={() => { setCurrentSection('about'); setIsMenuOpen(false) }}
-              className="block w-full text-left py-2 text-sm font-medium text-muted-foreground hover:text-primary"
-            >
-              {t('navigation.about')}
-            </button>
-            <button
-              onClick={() => { setCurrentSection('contact'); setIsMenuOpen(false) }}
-              className="block w-full text-left py-2 text-sm font-medium text-muted-foreground hover:text-primary"
-            >
-              {t('navigation.contact')}
-            </button>
-          </div>
-        )}
-      </div>
-    </nav>
-  )
-
-  // 首页组件
-  const HomePage = () => (
-    <div className="fade-in">
-      {/* 主视觉区域 */}
-      <section 
-        className="min-h-screen flex items-center justify-center text-white relative hero-section"
-        style={{
-          backgroundImage: `linear-gradient(rgba(44, 62, 80, 0.5), rgba(44, 62, 80, 0.5)), url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className="text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-chinese">{t('site.title')}</h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90">{t('site.subtitle')}</p>
-          <p className="text-lg mb-12 max-w-2xl mx-auto leading-relaxed opacity-80">
-            {t('site.description')}
-          </p>
-          <Button 
-            size="lg" 
-            className="bg-accent hover:bg-accent/90 text-white px-8 py-3 text-lg"
-            onClick={() => setCurrentSection('articles')}
-          >
-            {t('site.cta')}
-          </Button>
-        </div>
-      </section>
-
-      {/* 专栏特色 */}
-      <section className="py-16 bg-secondary/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 font-chinese">{t('sections.features.title')}</h2>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-            {t('sections.features.description')}
-          </p>
-        </div>
-      </section>
-
-      {/* 核心理念 */}
-      <section className="py-20 bg-gradient-to-r from-primary/5 to-accent/5">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center justify-center opacity-10">
-              <div className="w-64 h-64 rounded-full bg-gradient-to-r from-primary to-accent"></div>
-            </div>
-            <div className="relative z-10">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-muted-foreground">总体思想</h2>
-              <h3 className="text-4xl md:text-6xl font-bold mb-8 font-chinese text-gradient">
-                {t('site.core_philosophy')}
-              </h3>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                {isZh ? "念和在心，意味着时刻保持内心的和谐觉知；归和而明，则是通过实践六和达到清明的觉醒状态。" : "Harmony in mind means maintaining harmonious awareness at all times; clarity in return means achieving clear awakened state through practicing the six harmonies."}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 总览图 */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 font-chinese">六和总览</h2>
-          <div className="relative">
-            <img 
-              src={isZh ? overviewChartZh : overviewChartEn}
-              alt={isZh ? "心沐六和总览图" : "Ximory Six Harmonies Overview"}
-              className="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* 最新文章预览 */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-chinese">{t('sections.articles.title')}</h2>
-            <p className="text-lg text-muted-foreground">
-              {t('sections.articles.description')}
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {articles.slice(0, 3).map((article) => {
-              const IconComponent = getArticleIcon(article.harmony)
-              const articleData = article[language] || article.zh
-              return (
-                <Card key={article.id} className="article-card overflow-hidden">
-                  <div className="relative h-48">
-                    <img 
-                      src={imageMap[article.image]} 
-                      alt={articleData.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className={`absolute top-4 left-4 w-10 h-10 rounded-full bg-gradient-to-r ${getArticleColor(article.harmony)} flex items-center justify-center`}>
-                      <IconComponent className="w-5 h-5 text-white" />
-                    </div>
-                  </div>
-                  <CardHeader>
-                    <div className="flex justify-between items-start mb-2">
-                      <Badge variant="secondary" className="text-xs">
-                        {article.date}
-                      </Badge>
-                    </div>
-                    <CardTitle className="text-lg leading-tight font-chinese">
-                      {articleData.title}
-                    </CardTitle>
-                    <CardDescription className="text-sm">
-                      {articleData.subtitle}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                      {articleData.description}
-                    </p>
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      className="w-full"
-                      onClick={() => window.open(articleData.url, '_blank')}
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      阅读原文
-                    </Button>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-
-  // 文章列表页面
-  const ArticlesPage = () => (
-    <div className="fade-in pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-chinese">{t('sections.articles.title')}</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t('sections.articles.description')}
-          </p>
-        </div>
-
-        {/* 六和要素卡片 */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-8 text-center font-chinese">六和要素</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <HarmonyCard harmonyKey="self" />
-            <HarmonyCard harmonyKey="social" />
-            <HarmonyCard harmonyKey="nature" />
-            <HarmonyCard harmonyKey="energy" />
-            <HarmonyCard harmonyKey="frequency" />
-            <HarmonyCard harmonyKey="noself" />
-          </div>
-        </div>
-
-        <Separator className="my-16" />
-
-        {/* 文章列表 */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {articles.map((article) => {
-            const IconComponent = getArticleIcon(article.harmony)
-            const articleData = article[language] || article.zh
-            return (
-              <Card key={article.id} className="article-card overflow-hidden">
-                <div className="relative h-48">
-                  <img 
-                    src={imageMap[article.image]} 
-                    alt={articleData.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className={`absolute top-4 left-4 w-10 h-10 rounded-full bg-gradient-to-r ${getArticleColor(article.harmony)} flex items-center justify-center`}>
-                    <IconComponent className="w-5 h-5 text-white" />
-                  </div>
-                </div>
-                <CardHeader>
-                  <div className="flex justify-between items-start mb-2">
-                    <Badge variant="secondary" className="text-xs">
-                      {article.date}
-                    </Badge>
-                  </div>
-                  <CardTitle className="text-lg leading-tight font-chinese">
-                    {articleData.title}
-                  </CardTitle>
-                  <CardDescription className="text-sm">
-                    {articleData.subtitle}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    {articleData.description}
-                  </p>
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="w-full"
-                    onClick={() => window.open(articleData.url, '_blank')}
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    阅读原文
-                  </Button>
-                </CardContent>
-              </Card>
-            )
-          })}
-        </div>
-      </div>
-    </div>
-  )
-
-  // 关于页面
-  const AboutPage = () => {
-    const aboutData = getContent('about')
-    const aboutContent = aboutData[language] || aboutData.zh
-
-    return (
-      <div className="fade-in pt-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 font-chinese">{aboutContent.title}</h1>
-            <p className="text-lg text-muted-foreground">
-              {aboutContent.subtitle}
-            </p>
-          </div>
-
-          <div className="space-y-12">
-            <Card className="p-8">
-              <CardHeader>
-                <CardTitle className="text-2xl font-chinese">{aboutContent.concept.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="prose prose-lg max-w-none">
-                  {aboutContent.concept.content.split('\n\n').map((paragraph, index) => (
-                    <p key={index} className="text-muted-foreground leading-relaxed mb-4">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="p-8">
-              <CardHeader>
-                <CardTitle className="text-2xl font-chinese">{aboutContent.mission.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  {aboutContent.mission.items.map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <div className="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-muted-foreground leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  // 联系页面
-  const ContactPage = () => {
-    const contactData = getContent('contact')
-    const contactContent = contactData[language] || contactData.zh
-
-    return (
-      <div className="fade-in pt-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 font-chinese">{contactContent.title}</h1>
-            <p className="text-lg text-muted-foreground">
-              {contactContent.subtitle}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-6">
-              <CardHeader>
-                <CardTitle className="text-xl font-chinese">{contactContent.wechat.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  {contactContent.wechat.description}
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="p-6">
-              <CardHeader>
-                <CardTitle className="text-xl font-chinese">{contactContent.interaction.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  {contactContent.interaction.description}
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <Card className="mt-8 p-6">
-            <CardHeader>
-              <CardTitle className="text-xl font-chinese">{contactContent.disclaimer.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                {contactContent.disclaimer.description}
-              </p>
-              <blockquote className="border-l-4 border-accent pl-4 italic text-lg text-center">
-                {contactContent.quote}
-              </blockquote>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    )
-  }
-
-  // 渲染当前页面
-  const renderCurrentPage = () => {
-    switch (currentSection) {
-      case 'home':
-        return <HomePage />
-      case 'articles':
-        return <ArticlesPage />
-      case 'about':
-        return <AboutPage />
-      case 'contact':
-        return <ContactPage />
-      default:
-        return <HomePage />
-    }
-  }
-
-  return (
-    <div className="min-h-screen bg-background text-foreground scroll-smooth">
-      <Navigation />
-      {renderCurrentPage()}
-      
-      {/* 回到顶部按钮 */}
-      {showScrollTop && (
-        <Button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 rounded-full shadow-lg z-40"
-          size="icon"
-        >
-          <ArrowUp className="w-5 h-5" />
-        </Button>
-      )}
-    </div>
-  )
-}
-
 function App() {
+  const [language, setLanguage] = useState('zh')
+  const [currentSection, setCurrentSection] = useState('home')
+
+  const content = {
+    zh: {
+      title: '心沐六和',
+      subtitle: '念和在心·归和而明',
+      description: '在这个快节奏的时代，我们常常迷失在外在的纷扰中，忘记了内心的声音。心沐六和，是一次深入内心的探索之旅，带您从内在觉醒到宇宙和谐，走上一条完整的修行之路。',
+      cta: '开始探索',
+      nav: {
+        home: '首页',
+        articles: '专栏文章',
+        about: '关于',
+        contact: '联系'
+      },
+      sections: {
+        features: '专栏特色',
+        overview: '六和总览',
+        harmonies: '六和要素'
+      }
+    },
+    en: {
+      title: 'Ximory Six Harmonies',
+      subtitle: 'Harmony in Mind · Clarity in Return',
+      description: 'In this fast-paced era, we often lose ourselves in external distractions, forgetting our inner voice. Ximory Six Harmonies is a journey of deep inner exploration, guiding you from inner awakening to cosmic harmony on a complete path of cultivation.',
+      cta: 'Begin Exploration',
+      nav: {
+        home: 'Home',
+        articles: 'Articles',
+        about: 'About',
+        contact: 'Contact'
+      },
+      sections: {
+        features: 'Column Features',
+        overview: 'Six Harmonies Overview',
+        harmonies: 'Six Harmonies Elements'
+      }
+    }
+  }
+
+  const t = content[language]
+
+  const sixHarmonies = [
+    {
+      id: 'awakening',
+      title: language === 'zh' ? '觉醒之路' : 'Awakening Path',
+      subtitle: language === 'zh' ? '开启·觉醒之路，从和开始' : 'Begin the awakening journey from harmony',
+      description: language === 'zh' ? '在这个充满分裂与对立的世界中，我们如何找到内心的平静与和谐？本篇文章将为您开启一扇通往内在觉醒的大门。' : 'In this world full of division and opposition, how do we find inner peace and harmony? This article will open a door to inner awakening for you.',
+      image: '/article_awakening_path.png',
+      date: '07/26'
+    },
+    {
+      id: 'self',
+      title: language === 'zh' ? '第一章 | 自我和' : 'Chapter 1 | Self Harmony',
+      subtitle: language === 'zh' ? '与己的和解' : 'Reconciliation with oneself',
+      description: language === 'zh' ? '真正的和谐始于与自己的和解，接纳自己的光明与阴影。当我们学会内在的和谐设定了基础。' : 'True harmony begins with reconciliation with oneself, accepting both light and shadow. When we learn inner harmony, we set the foundation.',
+      image: '/article_self_harmony.png',
+      date: '1 week ago'
+    },
+    {
+      id: 'social',
+      title: language === 'zh' ? '第二章 | 社会和' : 'Chapter 2 | Social Harmony',
+      subtitle: language === 'zh' ? '与他人的和谐' : 'Harmony with others',
+      description: language === 'zh' ? '当我们与自己和解后，下一步是学会与他人和谐相处。这不仅仅是表面的礼貌，而是深层的理解与共鸣。' : 'After reconciling with ourselves, the next step is learning to live in harmony with others. This is not just surface politeness, but deep understanding and resonance.',
+      image: '/article_social_harmony.png',
+      date: '2 weeks ago'
+    },
+    {
+      id: 'nature',
+      title: language === 'zh' ? '第三章 | 自然和' : 'Chapter 3 | Nature Harmony',
+      subtitle: language === 'zh' ? '与自然的连接' : 'Connection with nature',
+      description: language === 'zh' ? '人类是自然的一部分，当我们重新连接自然，我们就找到了生命的根源和力量。' : 'Humans are part of nature. When we reconnect with nature, we find the source and power of life.',
+      image: '/article_nature_harmony.png',
+      date: '3 weeks ago'
+    },
+    {
+      id: 'energy',
+      title: language === 'zh' ? '第四章 | 能量和' : 'Chapter 4 | Energy Harmony',
+      subtitle: language === 'zh' ? '内炼成炉，能量充盈' : 'Internal cultivation, abundant energy',
+      description: language === 'zh' ? '通过修炼和调息，调和身心能量，让生命力充盈流动，达到身心灵的统一与和谐。' : 'Through cultivation and breath regulation, harmonize body-mind energy, let life force flow abundantly, achieving unity and harmony of body, mind and spirit.',
+      image: '/article_energy_harmony.png',
+      date: '4 weeks ago'
+    },
+    {
+      id: 'frequency',
+      title: language === 'zh' ? '第五章 | 共频和' : 'Chapter 5 | Frequency Harmony',
+      subtitle: language === 'zh' ? '内合成一，同频共振' : 'Internal unity, resonant frequency',
+      description: language === 'zh' ? '与宇宙频率同步，在同频共振中实现更高层次的和谐，体验万物一体的宇宙意识。' : 'Synchronize with universal frequency, achieve higher levels of harmony through resonant vibration, experience cosmic consciousness of universal oneness.',
+      image: '/article_frequency_harmony.png',
+      date: '5 weeks ago'
+    },
+    {
+      id: 'noself',
+      title: language === 'zh' ? '第六章 | 无我和' : 'Chapter 6 | Selfless Harmony',
+      subtitle: language === 'zh' ? '无边无际，无处不在' : 'Boundless, omnipresent',
+      description: language === 'zh' ? '超越个体的局限，达到无我的境界，体验纯粹的存在，实现终极的解脱与和谐。' : 'Transcend individual limitations, reach the realm of selflessness, experience pure existence, achieve ultimate liberation and harmony.',
+      image: '/article_no_self_harmony.png',
+      date: '6 weeks ago'
+    }
+  ]
+
   return (
-    <LanguageProvider>
-      <AppContent />
-    </LanguageProvider>
+    <div className="App">
+      {/* Navigation */}
+      <nav className="navbar">
+        <div className="nav-container">
+          <div className="nav-brand">
+            <h1>{t.title}</h1>
+          </div>
+          <div className="nav-menu">
+            <button 
+              className={currentSection === 'home' ? 'nav-link active' : 'nav-link'}
+              onClick={() => setCurrentSection('home')}
+            >
+              {t.nav.home}
+            </button>
+            <button 
+              className={currentSection === 'articles' ? 'nav-link active' : 'nav-link'}
+              onClick={() => setCurrentSection('articles')}
+            >
+              {t.nav.articles}
+            </button>
+          </div>
+          <div className="language-toggle">
+            <button 
+              className={language === 'zh' ? 'lang-btn active' : 'lang-btn'}
+              onClick={() => setLanguage('zh')}
+            >
+              中文
+            </button>
+            <button 
+              className={language === 'en' ? 'lang-btn active' : 'lang-btn'}
+              onClick={() => setLanguage('en')}
+            >
+              EN
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <main className="main-content">
+        {currentSection === 'home' && (
+          <>
+            {/* Hero Section */}
+            <section className="hero-section">
+              <div className="hero-content">
+                <h1 className="hero-title">{t.title}</h1>
+                <p className="hero-subtitle">{t.subtitle}</p>
+                <p className="hero-description">{t.description}</p>
+                <button className="cta-btn">{t.cta}</button>
+              </div>
+            </section>
+
+            {/* Overview Section */}
+            <section className="overview-section">
+              <div className="section-container">
+                <h2 className="section-title">{t.sections.overview}</h2>
+                <div className="overview-image">
+                  <img 
+                    src={language === 'zh' ? '/overview_zh.png' : '/overview_en.png'} 
+                    alt={t.sections.overview}
+                  />
+                </div>
+              </div>
+            </section>
+
+            {/* Articles Section */}
+            <section className="articles-section">
+              <div className="section-container">
+                <h2 className="section-title">{t.sections.harmonies}</h2>
+                <div className="articles-grid">
+                  {sixHarmonies.map((article) => (
+                    <article key={article.id} className="article-card">
+                      <div className="article-image">
+                        <img src={article.image} alt={article.title} />
+                      </div>
+                      <div className="article-content">
+                        <div className="article-meta">
+                          <span className="article-date">{article.date}</span>
+                        </div>
+                        <h3 className="article-title">{article.title}</h3>
+                        <p className="article-subtitle">{article.subtitle}</p>
+                        <p className="article-description">{article.description}</p>
+                        <button className="read-more-btn">
+                          {language === 'zh' ? '阅读原文' : 'Read More'}
+                        </button>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </section>
+          </>
+        )}
+
+        {currentSection === 'articles' && (
+          <section className="articles-page">
+            <div className="section-container">
+              <h2 className="page-title">{t.nav.articles}</h2>
+              <div className="articles-grid">
+                {sixHarmonies.map((article) => (
+                  <article key={article.id} className="article-card">
+                    <div className="article-image">
+                      <img src={article.image} alt={article.title} />
+                    </div>
+                    <div className="article-content">
+                      <div className="article-meta">
+                        <span className="article-date">{article.date}</span>
+                      </div>
+                      <h3 className="article-title">{article.title}</h3>
+                      <p className="article-subtitle">{article.subtitle}</p>
+                      <p className="article-description">{article.description}</p>
+                      <button className="read-more-btn">
+                        {language === 'zh' ? '阅读原文' : 'Read More'}
+                      </button>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+      </main>
+
+      {/* Footer */}
+      <footer className="footer">
+        <div className="footer-content">
+          <p>&copy; 2024 {t.title}. {language === 'zh' ? '版权所有' : 'All rights reserved'}.</p>
+        </div>
+      </footer>
+    </div>
   )
 }
 
