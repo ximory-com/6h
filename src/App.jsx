@@ -31,7 +31,7 @@ function App() {
       title: 'Ximory Six Harmonies',
       subtitle: 'Harmony in Mind · Clarity in Return',
       signature: 'Ximory Sun and Moon, shining with light, illuminating the true heart, harmonizing all phenomena',
-      wechat: 'WeChat: Ximory Sun and Moon',
+      wechat: 'WeChat: xinmuriyue',
       description: 'In this fast-paced era, we often lose ourselves in external distractions, forgetting our inner voice. Ximory Six Harmonies is a journey of deep inner exploration, guiding you from inner awakening to cosmic harmony on a complete path of cultivation.',
       cta: 'Begin Exploration',
       nav: {
