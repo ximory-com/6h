@@ -11,8 +11,8 @@ import './App.css'
 
 // 导入图片
 import heroBackground from './assets/hero_background_optimized.png'
-import overviewChartZh from './assets/overview_chart_chinese.png'
-import overviewChartEn from './assets/overview_chart_bilingual.png'
+import overviewChartZh from './assets/overview_zh.png'
+import overviewChartEn from './assets/overview_en.png'
 import selfHarmonyImage from './assets/article_self_harmony.png'
 import socialHarmonyImage from './assets/article_social_harmony.png'
 import natureHarmonyImage from './assets/article_nature_harmony.png'

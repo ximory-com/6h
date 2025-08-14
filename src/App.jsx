@@ -224,7 +224,7 @@ function App() {
               <div className="section-container">
                 <div className="overview-image">
                   <img 
-                    src={language === 'zh' ? '/overview_zh.png' : '/overview_en.png'} 
+                    src={language === 'zh' ? '/overview_zh.svg' : '/overview_en.svg'} 
                     alt={t.sections.overview}
                     className="rotating-overview"
                   />
