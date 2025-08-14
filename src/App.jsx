@@ -65,7 +65,7 @@ function App() {
       enlightenment: language === 'zh' ? '返观自我 • 穿越阻隔 • 回归本真' : 'Return to observe self • Transcend barriers • Return to authenticity',
       heartWords: language === 'zh' ? '脱下伪装，活出真实，看似脆弱，却无比自在。' : 'Remove the mask, live authentically, seemingly vulnerable, yet infinitely free.',
       interpretation: language === 'zh' ? '与内在自我对话，让情绪、认知与行动保持一致，减少内耗，活出真实的自己。' : 'Dialogue with inner self, align emotions, cognition and actions, reduce internal friction, live authentically.',
-      image: '/article_self_harmony.png',
+      image: './assets/article_self_harmony.png',
       date: '1 week ago'
     },
     {
@@ -81,7 +81,7 @@ function App() {
       enlightenment: language === 'zh' ? '定位自身 • 映照他者 • 建构秩序' : 'Position self • Reflect others • Construct order',
       heartWords: language === 'zh' ? '减少内耗，保持坦然；彼此共鸣，彼此成就。' : 'Reduce internal friction, maintain equanimity; mutual resonance, mutual achievement.',
       interpretation: language === 'zh' ? '在与他人的交往中保持平衡，不被外界裹挟，也不刻意对抗。' : 'Maintain balance in interactions with others, neither swept away by external forces nor deliberately opposing.',
-      image: '/article_social_harmony.png',
+      image: './assets/article_social_harmony.png',
       date: '2 weeks ago'
     },
     {
@@ -97,7 +97,7 @@ function App() {
       enlightenment: language === 'zh' ? '顺应节律 • 滋养身心 • 融入生态' : 'Follow rhythm • Nourish body and mind • Integrate into ecology',
       heartWords: language === 'zh' ? '随江河起落，合天地吐纳；偕四时流转，共万物生息。' : 'Rise and fall with rivers, breathe with heaven and earth; flow with four seasons, live with all beings.',
       interpretation: language === 'zh' ? '顺应四时节律，与自然界保持呼应，让身心在环境中得以复原与滋养。' : 'Follow seasonal rhythms, resonate with nature, let body and mind restore and nourish in the environment.',
-      image: '/article_nature_harmony.png',
+      image: './assets/article_nature_harmony.png',
       date: '3 weeks ago'
     },
     {
@@ -113,7 +113,7 @@ function App() {
       enlightenment: language === 'zh' ? '点燃之火 • 蓄养根基 • 稳定气场' : 'Ignite the fire • Cultivate foundation • Stabilize energy field',
       heartWords: language === 'zh' ? '回归身体的根，守住生命的气。' : 'Return to the root of body, guard the qi of life.',
       interpretation: language === 'zh' ? '调顺身体核心的生理与心理联结，让呼吸、气血与意识同频，稳住生命的"根"。' : 'Harmonize core physiological and psychological connections, synchronize breath, qi-blood and consciousness, stabilize the "root" of life.',
-      image: '/article_energy_harmony.png',
+      image: './assets/article_energy_harmony.png',
       date: '4 weeks ago'
     },
     {
@@ -145,7 +145,7 @@ function App() {
       enlightenment: language === 'zh' ? '源于空寂 • 涵容万物 • 自然无碍' : 'Originate from emptiness • Embrace all things • Naturally unobstructed',
       heartWords: language === 'zh' ? '不再执着于存在，我开始真正存在。' : 'No longer attached to existence, I begin to truly exist.',
       interpretation: language === 'zh' ? '超越自我限定，融入万物的自由流动，无内无外，无边无际；无拘无束，无处不在；心无所往，自然而然，生生不息。' : 'Transcend self-limitation, merge into free flow of all things, no inside or outside, boundless; unrestrained, omnipresent; mind goes nowhere, naturally spontaneous, eternally regenerating.',
-      image: '/article_no_self_harmony.png',
+      image: './assets/article_no_self_harmony.png',
       date: '6 weeks ago'
     }
   ]
@@ -224,7 +224,7 @@ function App() {
               <div className="section-container">
                 <div className="overview-image">
                   <img 
-                    src={language === 'zh' ? '/overview_zh.png' : '/overview_en.png'} 
+                    src={language === 'zh' ? './assets/overview_zh.svg' : './assets/overview_en.svg'} 
                     alt={t.sections.overview}
                     className="rotating-overview"
                   />
