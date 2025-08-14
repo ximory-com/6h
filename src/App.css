@@ -239,14 +239,12 @@ body {
 }
 
 .overview-image {
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 
 .overview-image img {
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
 .rotating-overview {
