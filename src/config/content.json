@@ -413,6 +413,40 @@
       },
       "image": "/images/article_awakening_path.png",
       "url": "https://mp.weixin.qq.com/s/six-harmonies-integration"
+    },
+    {
+      "id": "harmony-return",
+      "zh": {
+        "title": "心沐六和：归和",
+        "subtitle": "念和在心 • 归和而明",
+        "excerpt": "归和是六和体系的升华，当我们将六和融会贯通，内心自然归于和谐，智慧自然显现。",
+        "readMore": "阅读原文"
+      },
+      "en": {
+        "title": "Ximory Six Harmonies: Return to Harmony",
+        "subtitle": "Harmony in Mind • Return to Clarity",
+        "excerpt": "Return to Harmony is the sublimation of the Six Harmonies system, when we integrate the six harmonies, the heart naturally returns to harmony and wisdom naturally manifests.",
+        "readMore": "Read More"
+      },
+      "image": "/images/article_harmony_return.png",
+      "url": "https://mp.weixin.qq.com/s/harmony-return"
+    },
+    {
+      "id": "form-harmony-beauty",
+      "zh": {
+        "title": "心沐六和：延伸",
+        "subtitle": "形意和谐之美",
+        "excerpt": "形意和谐是六和体系的延伸，探索形式与意义的完美统一，在美的体验中感悟生命的真谛。",
+        "readMore": "阅读原文"
+      },
+      "en": {
+        "title": "Ximory Six Harmonies: Extension",
+        "subtitle": "Beauty of Form and Meaning Harmony",
+        "excerpt": "Form and meaning harmony is an extension of the Six Harmonies system, exploring the perfect unity of form and meaning, understanding the essence of life through the experience of beauty.",
+        "readMore": "Read More"
+      },
+      "image": "/images/article_form_harmony.png",
+      "url": "https://mp.weixin.qq.com/s/form-harmony-beauty"
     }
   ],
   "assets": {

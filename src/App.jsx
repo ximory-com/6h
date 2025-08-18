@@ -27,6 +27,14 @@ function App() {
     setLanguage(language === 'zh' ? 'en' : 'zh')
   }
 
+  const scrollToSection = (sectionId) => {
+    setCurrentSection(sectionId)
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   const currentHarmony = sixHarmonies[currentHarmonyIndex]
   const harmonyContent = currentHarmony[language]
 
@@ -44,8 +52,18 @@ function App() {
             <span className="nav-title">{content.title}</span>
           </div>
           <div className="nav-center">
-            <a href="#home" className="nav-link">{navigation.home}</a>
-            <a href="#articles" className="nav-link">{navigation.articles}</a>
+            <button 
+              onClick={() => scrollToSection('home')} 
+              className={`nav-link ${currentSection === 'home' ? 'active' : ''}`}
+            >
+              {navigation.home}
+            </button>
+            <button 
+              onClick={() => scrollToSection('articles')} 
+              className={`nav-link ${currentSection === 'articles' ? 'active' : ''}`}
+            >
+              {navigation.articles}
+            </button>
           </div>
           <div className="nav-right">
             <span className="wechat-info">{content.wechat}</span>
@@ -57,7 +75,7 @@ function App() {
       </nav>
 
       {/* Hero区域 */}
-      <section className="hero" style={{backgroundImage: `url(${assets.heroBackground})`}}>
+      <section id="home" className="hero" style={{backgroundImage: `url(${assets.heroBackground})`}}>
         <div className="hero-overlay">
           <div className="hero-content">
             <h1 className="hero-title">{content.title}</h1>
@@ -97,7 +115,6 @@ function App() {
         <div className="harmony-carousel">
           <div className="harmony-card" style={{borderColor: harmonyContent.color}}>
             <div className="harmony-header">
-              <div className="harmony-emoji">{currentHarmony.emoji}</div>
               <img 
                 src={currentHarmony.logo} 
                 alt={harmonyContent.title} 
@@ -201,7 +218,7 @@ function App() {
       </section>
 
       {/* 专栏文章 */}
-      <section className="articles-section">
+      <section id="articles" className="articles-section">
         <h2 className="section-title">{navigation.articles}</h2>
         <div className="articles-grid">
           {articles.map((article) => (
