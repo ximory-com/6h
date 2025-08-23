@@ -334,28 +334,37 @@ body {
 }
 
 .harmony-details {
-  display: grid;
+  display: grid !important;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   margin-bottom: 2rem;
   text-align: left;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
 }
 
 .harmony-field {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   gap: 0.5rem;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .field-label {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7) !important;
   font-weight: 500;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .field-value {
   font-size: 1rem;
-  color: #ffffff;
+  color: #ffffff !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .field-value.code {
