@@ -1277,6 +1277,7 @@ body {
   .harmony-card {
     margin: 0 1rem 2rem 1rem;
     padding: 1.5rem;
+    max-width: calc(100vw - 2rem);
   }
   
   .harmony-details {
@@ -1297,6 +1298,14 @@ body {
   
   .harmony-logo {
     height: 50px;
+  }
+  
+  .harmony-carousel {
+    padding: 0 1rem;
+  }
+  
+  .carousel-indicators {
+    margin: 1rem 0;
   }
 }
 
