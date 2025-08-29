@@ -279,21 +279,21 @@
   ],
   "articles": [
     {
-      "id": "awakening-path",
+      "id": "practice-harmony-lifestyle",
       "zh": {
-        "title": "觉醒之路",
-        "subtitle": "从迷茫到清明的内在旅程",
-        "excerpt": "每个人都有属于自己的觉醒之路，这是一条从迷茫走向清明，从分裂走向整合的内在旅程。在这个快节奏的时代，我们常常迷失在外在的纷扰中，忘记了内心的声音。觉醒不是一个终点，而是一个持续的过程，需要我们不断地自我觉察和内在探索。",
+        "title": "心沐六和：实践｜让和谐成为一种生活方式",
+        "subtitle": "将六和体系融入日常生活",
+        "excerpt": "和谐不仅是一种理念，更是一种可以实践的生活方式。通过日常的修行和觉察，我们可以将六和体系融入到生活的每一个细节中，让和谐成为我们存在的自然状态。在快节奏的现代生活中，如何保持内心的平静与和谐，如何在忙碌中找到生命的意义，这些都是我们需要探索的实践课题。",
         "readMore": "阅读原文"
       },
       "en": {
-        "title": "Path of Awakening",
-        "subtitle": "Inner Journey from Confusion to Clarity",
-        "excerpt": "Everyone has their own path of awakening, a journey from confusion to clarity, from fragmentation to integration.",
+        "title": "Ximory Six Harmonies: Practice | Making Harmony a Way of Life",
+        "subtitle": "Integrating the Six Harmonies System into Daily Life",
+        "excerpt": "Harmony is not just a concept, but a way of life that can be practiced. Through daily cultivation and awareness, we can integrate the Six Harmonies system into every detail of our lives.",
         "readMore": "Read More"
       },
-      "image": "/images/article_awakening_path.png",
-      "url": "https://mp.weixin.qq.com/s/d3b33e6da92ca261809dcda6f784d7a0"
+      "image": "/images/article_practice.png",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247486011&idx=1&sn=b4c4e8a84a294d9bc7abb6c972958067"
     },
     {
       "id": "self-harmony-practice",
