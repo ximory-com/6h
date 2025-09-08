@@ -50,7 +50,6 @@
   "sixHarmonies": [
     {
       "id": "self",
-      "emoji": "🌅",
       "zh": {
         "title": "自我和",
         "heartName": "自我和",
@@ -88,7 +87,6 @@
     },
     {
       "id": "social",
-      "emoji": "🪞",
       "zh": {
         "title": "社会和",
         "heartName": "社会和",
@@ -126,7 +124,6 @@
     },
     {
       "id": "nature",
-      "emoji": "🍃",
       "zh": {
         "title": "自然和",
         "heartName": "自然和",
@@ -164,7 +161,6 @@
     },
     {
       "id": "energy",
-      "emoji": "💓",
       "zh": {
         "title": "能量和",
         "heartName": "能量和",
@@ -202,7 +198,6 @@
     },
     {
       "id": "frequency",
-      "emoji": "🌊",
       "zh": {
         "title": "共频和",
         "heartName": "共频和",
@@ -240,7 +235,6 @@
     },
     {
       "id": "noself",
-      "emoji": "🌌",
       "zh": {
         "title": "无我和",
         "heartName": "无我和",
@@ -283,7 +277,7 @@
       "zh": {
         "title": "心沐六和：实践｜让和谐成为一种生活方式",
         "subtitle": "将六和体系融入日常生活",
-        "excerpt": "当它成为一种习惯，'和'就会自然流淌在我们的一言一行、一思一念里。六和，不只是理念，也不只是文字。真正的价值，在于把它带进生活的呼吸、工作的决择、关系的互动里。当'和'成为一种姿态，它就会是滋润我们的生活方式。",
+        "excerpt": "和谐不仅是一种理念，更是一种可以实践的生活方式。通过日常的修行和觉察，我们可以将六和体系融入到生活的每一个细节中，让和谐成为我们存在的自然状态。",
         "readMore": "阅读原文"
       },
       "en": {
@@ -293,14 +287,14 @@
         "readMore": "Read More"
       },
       "image": "/images/article_practice.png",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247486011&idx=1&sn=b4c4e8a84a294d9bc7abb6c972958067&chksm=969cc9fba1eb40edcac7b68a467df360a92f1d585411ca70468b12cccdf2844dd7bbfc1e1aca&scene=178&cur_album_id=4092359222594060293&search_click_id=#rd"
+      "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247486011&idx=1&sn=b4c4e8a84a294d9bc7abb6c972958067"
     },
     {
       "id": "extension-form-harmony",
       "zh": {
         "title": "心沐六和：延伸｜形意和谐之美",
         "subtitle": "探索形式与意义的完美统一",
-        "excerpt": "心沐六和，由意出形，涂上色彩，画上符号，映出意象，演现生机，念和在心，由形化行，由行合意，归和而明。这一组图形，随大和的成铃缓缓生长，如水循势，如光自明，到了该呈现的时候，它便涌现而出。",
+        "excerpt": "形意和谐是六和体系的延伸，探索形式与意义的完美统一。在美的体验中，我们感悟生命的真谛，发现存在的深层意义。",
         "readMore": "阅读原文"
       },
       "en": {
@@ -310,14 +304,14 @@
         "readMore": "Read More"
       },
       "image": "/images/article_extension.png",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247486007&idx=1&sn=964e998cdc210d915cd67a0e4b1a637b&chksm=969cc9f7a1eb40e11e0f7eb6b355c8a0e15b084dcc86ca654fcdd0aa87c14deb0b9fcd7377ad&scene=178&cur_album_id=4092359222594060293&search_click_id=#rd"
+      "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485999&idx=1&sn=form-harmony-beauty"
     },
     {
       "id": "return-harmony",
       "zh": {
         "title": "心沐六和：归和｜念和在心 • 归和而明",
         "subtitle": "六和体系的完整呈现",
-        "excerpt": "念和在心 • 归和而明。自我和｜内省成镜 • 心光自明，社会和｜外连成桥 • 众生无隔，自然和｜外采成流 • 四时入怀，能量和｜内炼成炉 • 能量充盈，共频和｜内合成一 • 同频共振，无我和｜无边无际 • 无处不在。",
+        "excerpt": "归和是六和体系的升华，当我们将六和融会贯通，内心自然归于和谐，智慧自然显现。念和在心，归和而明，这是修行的最终指向。",
         "readMore": "阅读原文"
       },
       "en": {
@@ -327,7 +321,7 @@
         "readMore": "Read More"
       },
       "image": "/images/article_return.png",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485706&idx=1&sn=1d0ba17640074dcea968a74201371fb0&chksm=969ccacaa1eb43dc32c7ed03f16c3c29c0b42d8984f76eae2681ef6961eb14623c857e8cfec4&scene=178&cur_album_id=4092359222594060293&search_click_id=#rd"
+      "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485543&idx=1&sn=d3b33e6da92ca261809dcda6f784d7a0"
     },
     {
       "id": "no-self-harmony",
@@ -447,6 +441,125 @@
       },
       "image": "/images/article_form_harmony.png",
       "url": "https://mp.weixin.qq.com/s/form-harmony-beauty"
+    },
+    {
+      "id": "sixth-selfless-harmony",
+      "zh": {
+        "title": "心沐六和：第六篇｜无我和",
+        "subtitle": "",
+        "excerpt": "无我和是最高的境界，当我们放下自我的执着，就能融入万物的自由流动，体验真正的存在。无内无外，无边无际，心无所往，自然而然。",
+        "readMore": "阅读原文"
+      },
+      "en": {
+        "title": "",
+        "subtitle": "",
+        "excerpt": "",
+        "readMore": "Read More"
+      },
+      "image": "/images/article_sixth-selfless-harmony.png",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485xxx&idx=1&sn=selfless-harmony"
+    },
+    {
+      "id": "fifth-resonance-harmony",
+      "zh": {
+        "title": "心沐六和：第五篇｜共频和",
+        "subtitle": "",
+        "excerpt": "共频和让我们学会与他人、与系统同频共振，在协作中释放集体智慧，创造超越个体的奇迹。在同频共振中，我们共舞、共生、共创。",
+        "readMore": "阅读原文"
+      },
+      "en": {
+        "title": "",
+        "subtitle": "",
+        "excerpt": "",
+        "readMore": "Read More"
+      },
+      "image": "/images/article_fifth-resonance-harmony.png",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485xxx&idx=1&sn=resonance-harmony"
+    },
+    {
+      "id": "fourth-energy-harmony",
+      "zh": {
+        "title": "心沐六和：第四篇｜能量和",
+        "subtitle": "",
+        "excerpt": "能量和是生命力的源泉，通过调养身心，我们可以点燃内在的生命之火，获得持续的成长动力。回归身体的根，守住生命的气。",
+        "readMore": "阅读原文"
+      },
+      "en": {
+        "title": "",
+        "subtitle": "",
+        "excerpt": "",
+        "readMore": "Read More"
+      },
+      "image": "/images/article_fourth-energy-harmony.png",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485xxx&idx=1&sn=energy-harmony"
+    },
+    {
+      "id": "third-nature-harmony",
+      "zh": {
+        "title": "心沐六和：第三篇｜自然和",
+        "subtitle": "",
+        "excerpt": "自然和引导我们回归自然的节律，与四时变化保持同步，让身心在自然中得到滋养。随江河起落，合天地吐纳，偕四时流转，共万物生息。",
+        "readMore": "阅读原文"
+      },
+      "en": {
+        "title": "",
+        "subtitle": "",
+        "excerpt": "",
+        "readMore": "Read More"
+      },
+      "image": "/images/article_third-nature-harmony.png",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485xxx&idx=1&sn=nature-harmony"
+    },
+    {
+      "id": "second-social-harmony",
+      "zh": {
+        "title": "心沐六和：第二篇｜社会和",
+        "subtitle": "",
+        "excerpt": "社会和教导我们如何在复杂的人际关系中保持内心的平衡，既不被外界裹挟，也不刻意对抗。建立真实连接，融入社会网络。",
+        "readMore": "阅读原文"
+      },
+      "en": {
+        "title": "",
+        "subtitle": "",
+        "excerpt": "",
+        "readMore": "Read More"
+      },
+      "image": "/images/article_second-social-harmony.png",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485xxx&idx=1&sn=social-harmony"
+    },
+    {
+      "id": "first-self-harmony",
+      "zh": {
+        "title": "心沐六和：第一篇｜自我和",
+        "subtitle": "",
+        "excerpt": "自我和是六和体系的起点，通过与内在自我的深度对话，我们开始了解真实的自己。觉察自我本心，开启生命觉醒，脱下伪装，活出真实。",
+        "readMore": "阅读原文"
+      },
+      "en": {
+        "title": "",
+        "subtitle": "",
+        "excerpt": "",
+        "readMore": "Read More"
+      },
+      "image": "/images/article_first-self-harmony.png",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485xxx&idx=1&sn=self-harmony"
+    },
+    {
+      "id": "introduction-six-harmonies",
+      "zh": {
+        "title": "心沐六和：开篇｜六和体系介绍",
+        "subtitle": "",
+        "excerpt": "六和体系是一个完整的修行框架，从自我觉醒到宇宙和谐，为现代人提供了系统的成长路径。心沐六和，念和在心，归和而明。",
+        "readMore": "阅读原文"
+      },
+      "en": {
+        "title": "",
+        "subtitle": "",
+        "excerpt": "",
+        "readMore": "Read More"
+      },
+      "image": "/images/article_introduction-six-harmonies.png",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzE5ODMxNzc0Mw==&mid=2247485xxx&idx=1&sn=six-harmonies-intro"
     }
   ],
   "assets": {
@@ -456,4 +569,3 @@
     "overviewEn": "/icons/overview_en.svg"
   }
 }
-
