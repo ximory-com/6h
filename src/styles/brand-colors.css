@@ -1,0 +1,224 @@
+/* 品牌颜色定义 */
+:root {
+  --static-blue: #0072BB;
+  --tundra-green: #00A651;
+  --light-blue: #E6F3FA;
+  --light-green: #E6F7EF;
+  --dark-blue: #005A94;
+  --dark-green: #008541;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+}
+
+/* 主题颜色应用 */
+
+/* 背景颜色 */
+.bg-primary {
+  background-color: var(--static-blue) !important;
+}
+
+.bg-secondary {
+  background-color: var(--tundra-green) !important;
+}
+
+.bg-light-primary {
+  background-color: var(--light-blue) !important;
+}
+
+.bg-light-secondary {
+  background-color: var(--light-green) !important;
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, var(--static-blue) 0%, var(--tundra-green) 100%) !important;
+}
+
+/* 文本颜色 */
+.text-primary {
+  color: var(--static-blue) !important;
+}
+
+.text-secondary {
+  color: var(--tundra-green) !important;
+}
+
+.text-dark {
+  color: var(--gray-900) !important;
+}
+
+.text-muted {
+  color: var(--gray-600) !important;
+}
+
+/* 边框颜色 */
+.border-primary {
+  border-color: var(--static-blue) !important;
+}
+
+.border-secondary {
+  border-color: var(--tundra-green) !important;
+}
+
+/* 按钮样式 */
+.btn-primary {
+  background-color: var(--static-blue);
+  border-color: var(--static-blue);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-blue);
+  border-color: var(--dark-blue);
+  box-shadow: 0 4px 10px rgba(0, 114, 187, 0.3);
+}
+
+.btn-secondary {
+  background-color: var(--tundra-green);
+  border-color: var(--tundra-green);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--dark-green);
+  border-color: var(--dark-green);
+  box-shadow: 0 4px 10px rgba(0, 166, 81, 0.3);
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  border-color: var(--static-blue);
+  color: var(--static-blue);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--static-blue);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 114, 187, 0.3);
+}
+
+.btn-outline-secondary {
+  background-color: transparent;
+  border-color: var(--tundra-green);
+  color: var(--tundra-green);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--tundra-green);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 166, 81, 0.3);
+}
+
+/* 链接样式 */
+a {
+  color: var(--static-blue);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--tundra-green);
+  text-decoration: none;
+}
+
+/* 导航栏样式 */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: var(--static-blue);
+}
+
+.nav-link {
+  color: var(--gray-700);
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover, 
+.nav-link.active {
+  color: var(--tundra-green);
+}
+
+/* 卡片样式 */
+.card {
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.card-header {
+  background-color: var(--light-blue);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+/* 表单元素 */
+.form-control:focus {
+  border-color: var(--static-blue);
+  box-shadow: 0 0 0 0.2rem rgba(0, 114, 187, 0.25);
+}
+
+/* 徽章 */
+.badge-primary {
+  background-color: var(--static-blue);
+  color: white;
+}
+
+.badge-secondary {
+  background-color: var(--tundra-green);
+  color: white;
+}
+
+/* 进度条 */
+.progress-bar {
+  background-color: var(--static-blue);
+}
+
+/* 分页 */
+.page-item.active .page-link {
+  background-color: var(--static-blue);
+  border-color: var(--static-blue);
+}
+
+.page-link {
+  color: var(--static-blue);
+}
+
+.page-link:hover {
+  color: var(--dark-blue);
+}
+
+/* 列表组 */
+.list-group-item.active {
+  background-color: var(--static-blue);
+  border-color: var(--static-blue);
+}
+
+/* 提示框 */
+.alert-primary {
+  background-color: var(--light-blue);
+  border-color: var(--static-blue);
+  color: var(--dark-blue);
+}
+
+.alert-secondary {
+  background-color: var(--light-green);
+  border-color: var(--tundra-green);
+  color: var(--dark-green);
+}
+
